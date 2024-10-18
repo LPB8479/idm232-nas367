@@ -1,3 +1,53 @@
 /* =============
     Typography
 ============= */
+body {
+    font-family: 'Nunito Sans', Helvetica, sans-serif;
+}
+
+p, .headerButton {
+    //16px
+    font-size: 1rem;
+    font-weight: 400;
+    &.cuisine{
+        //12px
+        font-size: 0.75rem;
+        font-weight: 600;
+    }
+    &.preview{
+        //12px
+        font-size: 0.75rem;
+    }
+}
+
+h1 {
+    //36px
+    font-size: 2.25rem;
+    font-weight: 700;
+}
+
+h2 {
+    //36px
+    font-size: 2.25rem;
+    font-weight: 600;
+}
+
+h3 {
+    //24px
+    font-size: 1.5rem;
+    font-weight: 500;
+    &.preview{
+        //14px
+        font-size: 0.875rem;
+    }
+}
+
+h4 {
+    //20px
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.noLink a{
+    text-decoration: none !important;
+}
