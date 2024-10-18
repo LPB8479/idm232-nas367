@@ -325,6 +325,12 @@ template {
 /* =============
     Base
 ============= */
+ul.blankList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 /* =============
     Typography
 ============= */
