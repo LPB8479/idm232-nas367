@@ -1,3 +1,52 @@
 /* =============
     Header
 ============= */
+header {
+    background-color: var(--yellow);
+    padding: 20px 48px;
+    display: flex;
+    flex-direction: column;
+    @include xl{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.mobileOnly.fa-solid{
+    width: 48px;
+    height: 48px;
+}
+
+#mobileDoubeHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#headerLeft {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-direction: column;
+    @include xl{
+        flex-direction: row;
+    }
+}
+.headerNav{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+    @include xl{
+        flex-direction: row;
+    }
+}
+#headerRight {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-direction: column;
+    @include xl{
+        flex-direction: row;
+    }
+}

@@ -10,39 +10,61 @@
 </head>
 <body>
 <!--Header-->
-<header>
+<header class="closed">
     <div id="headerLeft">
-        <img id="logo" src="https://placehold.co/120" alt="logo">
-        <div class="mobileSearch mobileOnly search">
+        <div id="mobileDoubeHeader">
+            <img id="logo" src="https://placehold.co/120" alt="logo">
+            <div class="mobileOnly mobileSearch search">
+<i class="fa-solid fa-magnifying-glass"></i>
 <form action="search.php" method="get">
-    <input type="text" name="query">
-    <input type="submit" value="Search">
-</form>
-<i class="fa-solid fa-magnifying-glass"></i>        </div>
-        <i class="fa-solid fa-bars mobileOnly iconDefault"></i>
-        <i class="fa-solid fa-x mobileOnly iconActive"></i>
-        <nav>
-            <ul class="noLink blankList">
-                <li class="headerButton"><a href="">DISHES</a></li>
-                <li class="headerButton"><a href="">CATEGORIES</a></li>
-                <li class="headerButton"><a href="">PLANS</a></li>
-                <li class="headerButton"><a href="">GIFT</a></li>
-                <li class="headerButton"><a href="help.html">HELP</a></li>
-            </ul>
-        </nav>
+    <input type="text" name="query" placeholder="Search">
+    <!-- <input type="submit" value="Search"> -->
+</form>            </div>
+            <i class="fa-solid fa-bars mobileOnly iconDefault"></i>
+            <i class="fa-solid fa-x mobileOnly iconActive"></i>
+        </div>
+        <ul class="noLink blankList headerNav">
+            <li class="headerButton">
+                <div class="buttonState">
+                    <a href="">DISHES</a>
+                </div>
+            </li>
+            <li class="headerButton">
+                <div class="buttonState">
+                    <a href="">CATEGORIES</a>
+                </div>
+            </li>
+            <li class="headerButton">
+                <div class="buttonState">
+                    <a href="">PLANS</a>
+                </div>
+            </li>
+            <li class="headerButton">
+                <div class="buttonState">
+                    <a href="">GIFT</a>
+                </div>
+            </li>
+            <li class="headerButton">
+                <div class="buttonState">
+                    <a href="help.html">HELP</a>
+                </div>
+            </li>
+        </ul>
     </div>
     <div id="headerRight">
         <div class="desktopSearch desktopOnly search">
+<i class="fa-solid fa-magnifying-glass"></i>
 <form action="search.php" method="get">
-    <input type="text" name="query">
-    <input type="submit" value="Search">
-</form>
-<i class="fa-solid fa-magnifying-glass"></i>        </div>
-        <nav>
-            <ul class="blankList">
-                <li class="headerButton"><a href="">MY ACCOUNT</a></li>
-            </ul>
-        </nav>
+    <input type="text" name="query" placeholder="Search">
+    <!-- <input type="submit" value="Search"> -->
+</form>        </div>
+        <ul class="noLink blankList headerNav">
+            <li class="headerButton">
+                <div class="buttonState">
+                    <a href="">MY ACCOUNT</a>
+                </div>
+            </li>
+        </ul>
     </div>
 </header><!--Footer--></body>
 <script src="scripts-min.js"></script></html>

@@ -6,3 +6,16 @@ ul.blankList {
     margin: 0;
     padding: 0;
 }
+
+.mobileOnly{
+    @include xl{
+        display: none !important;
+    }
+}
+
+.desktopOnly{
+    display: none !important;
+    @include xl{
+        display: flex !important;
+    }
+}

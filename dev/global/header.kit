@@ -1,30 +1,52 @@
 <!--Header-->
-<header>
+<header class="closed">
     <div id="headerLeft">
-        <img id="logo" src="https://placehold.co/120" alt="logo">
-        <div class="mobileSearch mobileOnly search">
-            <!-- @import "search.kit"-->
+        <div id="mobileDoubeHeader">
+            <img id="logo" src="https://placehold.co/120" alt="logo">
+            <div class="mobileOnly mobileSearch search">
+                <!-- @import "search.kit"-->
+            </div>
+            <i class="fa-solid fa-bars mobileOnly iconDefault"></i>
+            <i class="fa-solid fa-x mobileOnly iconActive"></i>
         </div>
-        <i class="fa-solid fa-bars mobileOnly iconDefault"></i>
-        <i class="fa-solid fa-x mobileOnly iconActive"></i>
-        <nav>
-            <ul class="noLink blankList">
-                <li class="headerButton"><a href="">DISHES</a></li>
-                <li class="headerButton"><a href="">CATEGORIES</a></li>
-                <li class="headerButton"><a href="">PLANS</a></li>
-                <li class="headerButton"><a href="">GIFT</a></li>
-                <li class="headerButton"><a href="help.html">HELP</a></li>
-            </ul>
-        </nav>
+        <ul class="noLink blankList headerNav">
+            <li class="headerButton">
+                <div class="buttonState">
+                    <a href="">DISHES</a>
+                </div>
+            </li>
+            <li class="headerButton">
+                <div class="buttonState">
+                    <a href="">CATEGORIES</a>
+                </div>
+            </li>
+            <li class="headerButton">
+                <div class="buttonState">
+                    <a href="">PLANS</a>
+                </div>
+            </li>
+            <li class="headerButton">
+                <div class="buttonState">
+                    <a href="">GIFT</a>
+                </div>
+            </li>
+            <li class="headerButton">
+                <div class="buttonState">
+                    <a href="help.html">HELP</a>
+                </div>
+            </li>
+        </ul>
     </div>
     <div id="headerRight">
         <div class="desktopSearch desktopOnly search">
             <!-- @import "search.kit"-->
         </div>
-        <nav>
-            <ul class="blankList">
-                <li class="headerButton"><a href="">MY ACCOUNT</a></li>
-            </ul>
-        </nav>
+        <ul class="noLink blankList headerNav">
+            <li class="headerButton">
+                <div class="buttonState">
+                    <a href="">MY ACCOUNT</a>
+                </div>
+            </li>
+        </ul>
     </div>
 </header>
