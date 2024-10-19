@@ -6,47 +6,86 @@ header {
     padding: 20px 48px;
     display: flex;
     flex-direction: column;
-    @include xl{
+
+    @include xl {
         flex-direction: row;
         justify-content: space-between;
     }
-}
 
-.mobileOnly.fa-solid{
-    width: 48px;
-    height: 48px;
-}
+    & #headerLeft {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+        flex-direction: column;
 
-#mobileDoubeHeader{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
+        @include xl {
+            flex-direction: row;
+        }
 
-#headerLeft {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-    flex-direction: column;
-    @include xl{
-        flex-direction: row;
+        & #mobileDoubleHeader {
+            width: 100%;
+            height: 120px;
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            // @include xl{
+            //     gap: 0;
+            // }
+
+            & #logo{
+                width: 120px;
+            }
+
+            & .mobileSearch{
+                width: 100%;
+            }
+            
+            & .fa-bars {
+                font-size: 3rem;
+                padding: 8px;
+                height: 100%;
+            }
+        }
+
+        & .headerNav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-direction: column;
+
+            @include xl {
+                flex-direction: row;
+            }
+        }
+
     }
-}
-.headerNav{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    flex-direction: column;
-    @include xl{
-        flex-direction: row;
+
+    & #headerRight {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        flex-direction: column;
+
+        @include xl {
+            flex-direction: row;
+        }
     }
-}
-#headerRight {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    flex-direction: column;
-    @include xl{
-        flex-direction: row;
+
+    &.closed {
+        #mobileDoubleHeader {
+            .search, .headerNav {
+                display: none !important;
+            }
+        }
+    }
+
+    &.open {
+        #mobileDoubleHeader {
+            gap: 40px;
+            #logo {
+                display: none !important;
+            }
+        }
     }
 }

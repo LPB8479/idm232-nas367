@@ -1,15 +1,21 @@
 /* =============
     Search
 ============= */
-.search{
-    width: 100%;
-    padding: 10px;
+.search {
+    border: 1px solid black;
+    // width: 100%;
+    // padding: 10px;
     background: white;
     border-radius: 12px;
+    // display: flex;
+    // justify-content: flex-start;
+    // align-items: center;
+    // gap: 16px;
+    // height: 24px;
     display: flex;
-    justify-content: flex-start;
+    height: 48px;
+    padding: 10px;
     align-items: center;
     gap: 16px;
-    border: 1px solid black;
-    height: 24px;
+    flex: 1 0 0;
 }
