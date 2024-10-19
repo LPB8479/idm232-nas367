@@ -2,7 +2,6 @@
     Header
 ============= */
 header {
-    background-color: var(--yellow);
     padding: 20px 48px;
     display: flex;
     flex-direction: column;
@@ -33,14 +32,14 @@ header {
             //     gap: 0;
             // }
 
-            & #logo{
+            & #logo {
                 width: 120px;
             }
 
-            & .mobileSearch{
+            & .mobileSearch {
                 width: 100%;
             }
-            
+
             & .fa-bars {
                 font-size: 3rem;
                 padding: 8px;
@@ -73,16 +72,26 @@ header {
     }
 
     &.closed {
-        #mobileDoubleHeader {
-            .search, .headerNav {
-                display: none !important;
+
+        .mobileSearch,
+        .headerNav {
+            display: none !important;
+        }
+
+        @include xl {
+            .headerNav {
+                display: flex !important;
             }
         }
     }
 
     &.open {
+
+        gap: 20px;
+
         #mobileDoubleHeader {
             gap: 40px;
+
             #logo {
                 display: none !important;
             }

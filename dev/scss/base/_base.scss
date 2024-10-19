@@ -1,21 +1,55 @@
 /* =============
     Base
 ============= */
+body {
+    background-color: var(--yellow);
+}
+
 ul.blankList {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.mobileOnly{
-    @include xl{
+.mobileOnly {
+    @include xl {
         display: none !important;
     }
 }
 
-.desktopOnly{
+.desktopOnly {
     display: none !important;
-    @include xl{
+
+    @include xl {
         display: flex !important;
     }
 }
+
+main{
+    section{
+        padding-left: 24px;
+        padding-right: 24px;
+        @include xl{
+            padding-left: 48px;
+            padding-right: 48px;
+        }
+    }
+    #hero {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        img {
+            width: 100%;
+        }
+    }
+    #featuredRecipes{
+        background-color: white;
+        padding: 20px 230px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .tiles{
+            width: 100%;
+        }
+    }
+    }
