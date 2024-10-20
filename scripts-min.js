@@ -1,0 +1,1 @@
+function hamburger(){const e=document.getElementById("hamburger"),c=document.querySelector("header");e.addEventListener("click",(()=>{c.classList.contains("closed")?c.classList.replace("closed","open"):c.classList.replace("open","closed")}))}hamburger();
