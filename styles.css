@@ -352,6 +352,29 @@ ul.blankList {
   }
 }
 
+.cuisineTag {
+  background: #BFBFBF;
+  border-radius: 14.5px;
+  padding: 6px 12px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.time {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 10px;
+}
+
 .recipeCard {
   background: white;
   width: -webkit-fit-content;
@@ -374,10 +397,6 @@ ul.blankList {
   display: -ms-flexbox;
   display: flex;
 }
-.recipeCard h4,
-.recipeCard p {
-  margin: 0;
-}
 .recipeCard .recipeInfo {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -398,27 +417,6 @@ ul.blankList {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-.recipeCard .recipeInfo .cuisineTag {
-  background: #BFBFBF;
-  border-radius: 14.5px;
-  padding: 6px 12px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-.recipeCard .recipeInfo .time {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  gap: 10px;
 }
 .recipeCard .recipeInfo .desc {
   overflow: hidden;
@@ -643,6 +641,224 @@ main #resultsContent .results #errorImg img {
   -o-object-fit: cover;
      object-fit: cover;
 }
+main#recipe {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 48px;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+}
+main#recipe img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (min-width: 1200px) {
+  main#recipe {
+    padding-left: 182px;
+    padding-right: 182px;
+  }
+}
+main#recipe section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+}
+main#recipe #recipeIntro {
+  gap: 24px;
+}
+@media (min-width: 1200px) {
+  main#recipe #recipeIntro {
+    gap: 80px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  main#recipe #recipeIntro img {
+    width: 440px;
+  }
+}
+main#recipe #recipeIntro .recipeTitleContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 24px;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+}
+main#recipe #recipeIntro .recipeTitleContent .recipeTitleInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 8px;
+}
+main#recipe #recipeIntro .recipeTitleContent .recipeTitleInfo div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 32px;
+}
+main#recipe #ingredients {
+  gap: 24px;
+}
+@media (min-width: 1200px) {
+  main#recipe #ingredients {
+    gap: 80px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  main#recipe #ingredients img {
+    width: 440px;
+  }
+}
+main#recipe #ingredients .ingredientsText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 16px;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+}
+main#recipe #ingredients .ingredientsText ul {
+  line-height: 1.5rem;
+}
+main#recipe #instructions {
+  gap: 16px;
+}
+main#recipe #instructions .steps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 36px;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+}
+@media (min-width: 1200px) {
+  main#recipe #instructions .steps {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+    gap: 36px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+main#recipe #instructions .steps .step {
+  max-width: 472px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 24px;
+}
+main#recipe #instructions .steps .step img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+main#recipe #instructions .steps .step .stepInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 16px;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+}
+main#recipe #instructions .steps .step .stepInfo .stepNum {
+  border-radius: 16px;
+  background: var(--yellow);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 32px !important;
+  height: 32px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main#recipe #instructions .steps .step .stepInfo p {
+  width: calc(100% - 48px);
+}
 
 /* =============
     Typography
@@ -651,21 +867,29 @@ body {
   font-family: "Nunito Sans", Helvetica, sans-serif;
 }
 
-p, .headerButton, .search {
+p,
+.headerButton,
+.search {
+  margin: 0;
   font-size: 1rem;
   line-height: normal;
   font-style: normal;
   font-weight: 400;
 }
-p.cuisine, .headerButton.cuisine, .search.cuisine {
+p.cuisine,
+.headerButton.cuisine,
+.search.cuisine {
   font-size: 0.75rem;
   font-weight: 600;
 }
-p.preview, .headerButton.preview, .search.preview {
+p.preview,
+.headerButton.preview,
+.search.preview {
   font-size: 0.75rem;
 }
 
 h1 {
+  margin: 0;
   font-size: 2.25rem;
   font-weight: 700;
 }
@@ -676,6 +900,7 @@ h2 {
 }
 
 h3 {
+  margin: 0;
   font-size: 1.5rem;
   font-weight: 500;
 }
@@ -684,8 +909,14 @@ h3.preview {
 }
 
 h4 {
+  margin: 0;
   font-size: 1.25rem;
   font-weight: 600;
+}
+
+h5 {
+  font-size: 1.125rem;
+  font-weight: 700;
 }
 
 .noLink a {

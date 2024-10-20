@@ -5,18 +5,23 @@ body {
     font-family: 'Nunito Sans', Helvetica, sans-serif;
 }
 
-p, .headerButton, .search {
+p,
+.headerButton,
+.search {
     //16px
+    margin: 0;
     font-size: 1rem;
     line-height: normal;
     font-style: normal;
     font-weight: 400;
-    &.cuisine{
+
+    &.cuisine {
         //12px
         font-size: 0.75rem;
         font-weight: 600;
     }
-    &.preview{
+
+    &.preview {
         //12px
         font-size: 0.75rem;
     }
@@ -24,6 +29,7 @@ p, .headerButton, .search {
 
 h1 {
     //36px
+    margin: 0;
     font-size: 2.25rem;
     font-weight: 700;
 }
@@ -36,9 +42,11 @@ h2 {
 
 h3 {
     //24px
+    margin: 0;
     font-size: 1.5rem;
     font-weight: 500;
-    &.preview{
+
+    &.preview {
         //14px
         font-size: 0.875rem;
     }
@@ -46,10 +54,17 @@ h3 {
 
 h4 {
     //20px
+    margin: 0;
     font-size: 1.25rem;
     font-weight: 600;
 }
 
-.noLink a{
+h5 {
+    //18px
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+.noLink a {
     text-decoration: none !important;
 }
