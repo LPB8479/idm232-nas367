@@ -128,7 +128,9 @@ main {
 
             .recipeCard {
                 flex-direction: column;
-
+                .cardImg{
+                    padding: 0 39px;
+                }
                 .recipeInfo {
                     padding: 10px;
 
@@ -163,7 +165,9 @@ main {
 
             .recipeCard {
                 flex-direction: column;
-
+                .cardImg{
+                    padding: 0 39px;
+                }
                 .recipeInfo {
                     padding: 10px;
 
@@ -184,6 +188,7 @@ main {
                     flex-direction: row;
                     max-width: calc((100% - 120px)/2);
                     .cardImg{
+                        padding: 0;
                         width: 150px;
                         height: 150px;
                         img{

@@ -514,6 +514,9 @@ main #featuredRecipes .tiles .recipeCard {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+main #featuredRecipes .tiles .recipeCard .cardImg {
+  padding: 0 39px;
+}
 main #featuredRecipes .tiles .recipeCard .recipeInfo {
   padding: 10px;
 }
@@ -564,6 +567,9 @@ main #resultsContent .results .recipeCard {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+main #resultsContent .results .recipeCard .cardImg {
+  padding: 0 39px;
+}
 main #resultsContent .results .recipeCard .recipeInfo {
   padding: 10px;
 }
@@ -595,6 +601,7 @@ main #resultsContent .results .recipeCard .recipeInfo .desc {
     max-width: calc((100% - 120px) / 2);
   }
   main #resultsContent .results .recipeCard .cardImg {
+    padding: 0;
     width: 150px;
     height: 150px;
   }
