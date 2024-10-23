@@ -7,6 +7,7 @@
 ============= */
 :root {
   --yellow: #F4D136;
+  --orange: #E39418;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -938,9 +939,23 @@ h5 {
   display: -ms-flexbox;
   display: flex;
   border-radius: 14px;
+  width: 100%;
 }
 .headerButton .buttonState {
   padding: 20px 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .filterButton {
@@ -1003,7 +1018,7 @@ h5 {
 }
 
 .headerButton .buttonState:active, .filterButton:not(.disabled, .active) .buttonState:active {
-  background-color: rgba(226, 187, 13, 0.3);
+  background-color: var(--orange);
 }
 
 .buttonState > a {
@@ -1143,6 +1158,7 @@ header #headerLeft .headerNav {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 100%;
 }
 @media (min-width: 1200px) {
   header #headerLeft .headerNav {
@@ -1150,6 +1166,9 @@ header #headerLeft .headerNav {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
 }
 header #headerRight {
