@@ -75,19 +75,25 @@
 </header>    <main>
         <section id="resultsContent">
             <h1>Search Results</h1>
-            <div class="search">
+            <div class="searchFilter">
+                <div class="search">
 <!--Search-->
 <i class="fa-solid fa-magnifying-glass"></i>
 <form action="search.php" method="get">
     <input type="text" name="query" placeholder="Search">
     <!-- <input type="submit" value="Search"> -->
-</form>            </div>
+</form>                </div>
+                <div class="filterButton disabled">
+                    <div class="buttonState">
+                        <i class="fa-solid fa-filter"></i>
+                    </div>
+                </div>
+            </div>
             <div class="results noRecipes">
                 <h2>No Recipes Found</h2>
                 <div id="errorImg">
                     <img src="assets/errorImage.png" alt="error image">
                 </div>
-            </div>
         </section>
     </main>
 <!--Footer--></body>

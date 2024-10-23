@@ -11,6 +11,12 @@ ul.blankList {
     padding: 0;
 }
 
+.searchFilter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 .mobileOnly {
     @include xl {
         display: none !important;

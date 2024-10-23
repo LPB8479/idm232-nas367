@@ -335,6 +335,16 @@ ul.blankList {
   padding: 0;
 }
 
+.searchFilter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
 @media (min-width: 1200px) {
   .mobileOnly {
     display: none !important;
@@ -939,9 +949,57 @@ h5 {
   display: flex;
   border-radius: 14px;
 }
+.headerButton .buttonState {
+  padding: 20px 30px;
+}
+
+.filterButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 56px;
+  height: 56px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  border-radius: 16px;
+  border: 0.5px solid #000;
+  background: var(--yellow);
+}
+.filterButton .buttonState {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 0px;
+          flex: 1 0 0;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+}
+.filterButton .buttonState .fa-filter {
+  font-size: 1.75rem;
+}
+.filterButton.disabled {
+  border: 0;
+  background-color: #959595;
+}
+.filterButton.disabled .fa-filter {
+  color: #4D4D4D;
+}
 
 .buttonState {
-  padding: 20px 30px;
   width: 100%;
   border-radius: 14px;
   background-color: rgba(255, 255, 255, 0);
@@ -949,11 +1007,12 @@ h5 {
   transition: background-color 0.3s ease;
 }
 
-.headerButton .buttonState:hover {
+.headerButton .buttonState:hover,
+.filterButton:not(.disabled) .buttonState:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.headerButton .buttonState:active {
+.headerButton .buttonState:active, .filterButton:not(.disabled) .buttonState:active {
   background-color: rgba(226, 187, 13, 0.3);
 }
 
