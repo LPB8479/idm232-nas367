@@ -920,6 +920,7 @@ h5 {
 
 .noLink a {
   text-decoration: none !important;
+  color: black;
 }
 
 /* =============
