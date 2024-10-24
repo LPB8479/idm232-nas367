@@ -152,6 +152,79 @@ main {
             border: 1px solid #000;
         }
 
+        #filterResults {
+            display: flex;
+            padding: 16px 24px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+            align-self: stretch;
+            background: #F8E386;
+            @include xl{
+                padding: 16px;
+                margin-left: 48px;
+                margin-right: 48px;
+                flex-direction: row;
+            }
+
+            .searchFilter {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                border-radius: 14.5px;
+                background-color: white;
+                // &.active{
+
+                // }
+            }
+
+            #cuisineFilterCat {
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                align-content: flex-start;
+                gap: 24px;
+                align-self: stretch;
+                flex-wrap: wrap;
+
+                .cuisineFilter {
+                    border: 3px solid var(--orange, #E39418);
+                    padding: 10.5px 17px;
+                }
+            }
+
+            #dietaryFilterCat {
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 16px;
+                .dietaryFilter{
+                    padding: 7.5px 17px;
+                }
+
+                #pescFilter {
+                    border: 3px solid #947729;
+
+                    h3 {
+                        color: #947729;
+                        font-weight: 700;
+                    }
+                }
+
+                #vegetarianFilter,
+                #veganFilter {
+                    border: 3px solid #749429;
+
+                    h3 {
+                        color: #749429;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+
         .results {
             background-color: white;
             display: flex;

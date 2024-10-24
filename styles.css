@@ -538,6 +538,106 @@ main #resultsContent {
 main #resultsContent .search {
   border: 1px solid #000;
 }
+main #resultsContent #filterResults {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 16px 24px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 24px;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+  background: #F8E386;
+}
+@media (min-width: 1200px) {
+  main #resultsContent #filterResults {
+    padding: 16px;
+    margin-left: 48px;
+    margin-right: 48px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+main #resultsContent #filterResults .searchFilter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  border-radius: 14.5px;
+  background-color: white;
+}
+main #resultsContent #filterResults #cuisineFilterCat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  gap: 24px;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+main #resultsContent #filterResults #cuisineFilterCat .cuisineFilter {
+  border: 3px solid var(--orange, #E39418);
+  padding: 10.5px 17px;
+}
+main #resultsContent #filterResults #dietaryFilterCat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 16px;
+}
+main #resultsContent #filterResults #dietaryFilterCat .dietaryFilter {
+  padding: 7.5px 17px;
+}
+main #resultsContent #filterResults #dietaryFilterCat #pescFilter {
+  border: 3px solid #947729;
+}
+main #resultsContent #filterResults #dietaryFilterCat #pescFilter h3 {
+  color: #947729;
+  font-weight: 700;
+}
+main #resultsContent #filterResults #dietaryFilterCat #vegetarianFilter,
+main #resultsContent #filterResults #dietaryFilterCat #veganFilter {
+  border: 3px solid #749429;
+}
+main #resultsContent #filterResults #dietaryFilterCat #vegetarianFilter h3,
+main #resultsContent #filterResults #dietaryFilterCat #veganFilter h3 {
+  color: #749429;
+  font-weight: 700;
+}
 main #resultsContent .results {
   background-color: white;
   display: -webkit-box;
@@ -958,7 +1058,7 @@ h5 {
           flex-direction: column;
 }
 
-.filterButton {
+#filterButton {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -975,8 +1075,10 @@ h5 {
   border-radius: 16px;
   border: 0.5px solid #000;
   background: var(--yellow);
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
 }
-.filterButton .buttonState {
+#filterButton .buttonState {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -993,14 +1095,14 @@ h5 {
       -ms-grid-row-align: stretch;
       align-self: stretch;
 }
-.filterButton .buttonState .fa-filter {
+#filterButton .buttonState .fa-filter {
   font-size: 1.75rem;
 }
-.filterButton.disabled {
+#filterButton.disabled {
   border: 0;
   background-color: #959595;
 }
-.filterButton.disabled .fa-filter {
+#filterButton.disabled .fa-filter {
   color: #4D4D4D;
 }
 
@@ -1013,11 +1115,11 @@ h5 {
 }
 
 .headerButton .buttonState:hover,
-.filterButton:not(.disabled, .active) .buttonState:hover {
+#filterButton:not(.disabled, .active) .buttonState:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.headerButton .buttonState:active, .filterButton:not(.disabled, .active) .buttonState:active {
+.headerButton .buttonState:active, #filterButton:not(.disabled, .active) .buttonState:active {
   background-color: var(--orange);
 }
 

@@ -18,7 +18,7 @@
     }
 }
 
-.filterButton {
+#filterButton {
     display: flex;
     width: 56px;
     height: 56px;
@@ -28,6 +28,7 @@
     border-radius: 16px;
     border: 0.5px solid #000;
     background: var(--yellow);
+    transition: background-color 0.5s ease;
 
     .buttonState {
         display: flex;
@@ -59,11 +60,11 @@
 }
 
 .headerButton .buttonState:hover,
-.filterButton:not(.disabled, .active) .buttonState:hover {
+#filterButton:not(.disabled, .active) .buttonState:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-.headerButton .buttonState:active, .filterButton:not(.disabled, .active) .buttonState:active {
+.headerButton .buttonState:active, #filterButton:not(.disabled, .active) .buttonState:active {
     background-color: var(--orange);
 }
 
