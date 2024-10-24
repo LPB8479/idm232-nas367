@@ -461,4 +461,13 @@ main {
             }
         }
     }
+    #help{
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+
+    }
 }

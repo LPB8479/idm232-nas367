@@ -976,6 +976,19 @@ main#recipe #instructions .steps .step .stepInfo .stepNum {
 main#recipe #instructions .steps .step .stepInfo p {
   width: calc(100% - 48px);
 }
+main #help {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 
 /* =============
     Typography
