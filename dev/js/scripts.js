@@ -12,7 +12,7 @@ function hamburger() {
 hamburger();
 
 function simulateSearch() {
-    const searches = document.querySelectorAll(".search")
+    const searches = document.querySelectorAll(".search");
     searches.forEach((search) => {
         search.addEventListener("click", () => {
             window.location.href = 'results.html'
@@ -20,3 +20,31 @@ function simulateSearch() {
     })
 }
 simulateSearch()
+
+function filterMenu() {
+    //collapse filter menu
+    const filterButton = document.getElementById("filterButton");
+    document.getElementById('filterResults').style.display = "none"
+    filterButton.addEventListener("click", () => {
+        if(!filterButton.classList.contains("active")) {
+                $('#filterResults').slideDown(500);
+                filterButton.style.backgroundColor = "var(--orange)";
+                filterButton.style.borderColor = 'var(--orange)';
+                filterButton.classList.add("active");
+        } else {
+            $('#filterResults').slideUp(500);
+            filterButton.style.backgroundColor = "var(--yellow)";
+            filterButton.style.borderColor = 'black';
+            filterButton.classList.remove("active");
+        }
+    })
+
+    //filter buttons
+    const filters = document.querySelectorAll(".searchFilter");
+    filters.forEach((filterButton) => {
+        filterButton.addEventListener("click", () => {
+            filterButton.classList.toggle("active");
+        })
+    })
+}
+filterMenu();

@@ -604,8 +604,11 @@ main #resultsContent #filterResults #cuisineFilterCat {
       flex-wrap: wrap;
 }
 main #resultsContent #filterResults #cuisineFilterCat .cuisineFilter {
-  border: 3px solid var(--orange, #E39418);
+  border: 3px solid var(--orange);
   padding: 10.5px 17px;
+}
+main #resultsContent #filterResults #cuisineFilterCat .cuisineFilter.active {
+  background: var(--orange);
 }
 main #resultsContent #filterResults #dietaryFilterCat {
   display: -webkit-box;
@@ -629,6 +632,12 @@ main #resultsContent #filterResults #dietaryFilterCat #pescFilter h3 {
   color: #947729;
   font-weight: 700;
 }
+main #resultsContent #filterResults #dietaryFilterCat #pescFilter.active {
+  background-color: #947729;
+}
+main #resultsContent #filterResults #dietaryFilterCat #pescFilter.active h3 {
+  color: white;
+}
 main #resultsContent #filterResults #dietaryFilterCat #vegetarianFilter,
 main #resultsContent #filterResults #dietaryFilterCat #veganFilter {
   border: 3px solid #749429;
@@ -637,6 +646,14 @@ main #resultsContent #filterResults #dietaryFilterCat #vegetarianFilter h3,
 main #resultsContent #filterResults #dietaryFilterCat #veganFilter h3 {
   color: #749429;
   font-weight: 700;
+}
+main #resultsContent #filterResults #dietaryFilterCat #vegetarianFilter.active,
+main #resultsContent #filterResults #dietaryFilterCat #veganFilter.active {
+  background-color: #749429;
+}
+main #resultsContent #filterResults #dietaryFilterCat #vegetarianFilter.active h3,
+main #resultsContent #filterResults #dietaryFilterCat #veganFilter.active h3 {
+  color: white;
 }
 main #resultsContent .results {
   background-color: white;

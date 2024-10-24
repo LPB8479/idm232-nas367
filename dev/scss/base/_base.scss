@@ -175,9 +175,6 @@ main {
                 gap: 10px;
                 border-radius: 14.5px;
                 background-color: white;
-                // &.active{
-
-                // }
             }
 
             #cuisineFilterCat {
@@ -190,8 +187,11 @@ main {
                 flex-wrap: wrap;
 
                 .cuisineFilter {
-                    border: 3px solid var(--orange, #E39418);
+                    border: 3px solid var(--orange);
                     padding: 10.5px 17px;
+                    &.active{
+                        background: var(--orange);
+                    }
                 }
             }
 
@@ -211,6 +211,12 @@ main {
                         color: #947729;
                         font-weight: 700;
                     }
+                    &.active{
+                        background-color: #947729;
+                        h3 {
+                            color: white;
+                        }
+                    }
                 }
 
                 #vegetarianFilter,
@@ -220,6 +226,12 @@ main {
                     h3 {
                         color: #749429;
                         font-weight: 700;
+                    }
+                    &.active{
+                        background-color: #749429;
+                        h3 {
+                            color: white;
+                        }
                     }
                 }
             }
