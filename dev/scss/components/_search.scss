@@ -2,12 +2,12 @@
     Search
 ============= */
 .search {
-    max-width: 240px;
+    align-items: center;
     background: white;
     border-radius: 12px;
     display: flex;
-    padding: 10px;
-    align-items: center;
-    gap: 16px;
     flex: 1 0 0;
+    gap: 16px;
+    max-width: 240px;
+    padding: 10px;
 }

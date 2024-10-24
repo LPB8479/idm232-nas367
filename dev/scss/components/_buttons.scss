@@ -2,40 +2,40 @@
     Buttons
 ============= */
 .headerButton {
-    justify-content: center;
     align-items: center;
-    gap: 10px;
-    display: flex;
     border-radius: 14px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
     width: 100%;
 
     .buttonState {
-        padding: 20px 30px;
         align-items: center;
         align-self: center;
         display: flex;
         flex-direction: column;
+        padding: 20px 30px;
     }
 }
 
 #filterButton {
+    align-items: center;
+    background: var(--yellow);
+    border: 0.5px solid #000;
+    border-radius: 16px;
     display: flex;
-    width: 56px;
+    flex-shrink: 0;
     height: 56px;
     justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    border-radius: 16px;
-    border: 0.5px solid #000;
-    background: var(--yellow);
     transition: background-color 0.5s ease;
+    width: 56px;
 
     .buttonState {
+        align-items: center;
+        align-self: stretch;
         display: flex;
         justify-content: center;
-        align-items: center;
         flex: 1 0 0;
-        align-self: stretch;
 
         .fa-filter {
             //28 px
@@ -43,8 +43,8 @@
         }
     }
     &.disabled{
-        border: 0;
         background-color: #959595;
+        border: 0;
         .fa-filter{
             color: #4D4D4D;
         }
@@ -52,11 +52,10 @@
 }
 
 .buttonState {
-    width: 100%;
-    // height: 100%;
-    border-radius: 14px;
     background-color: rgba(255, 255, 255, 0);
+    border-radius: 14px;
     transition: background-color 0.3s ease;
+    width: 100%;
 }
 
 .headerButton .buttonState:hover,

@@ -337,12 +337,12 @@ ul.blankList {
 }
 
 .searchFilter {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   gap: 10px;
 }
 
@@ -364,15 +364,15 @@ ul.blankList {
 }
 
 .cuisineTag {
-  background: #BFBFBF;
-  border-radius: 14.5px;
-  padding: 6px 12px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background: #BFBFBF;
+  border-radius: 14.5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 6px 12px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -387,21 +387,21 @@ ul.blankList {
 }
 
 .recipeCard {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   background: white;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 10px 0px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  padding: 10px 0px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .recipeCard div {
   display: -webkit-box;
@@ -409,17 +409,17 @@ ul.blankList {
   display: flex;
 }
 .recipeCard .recipeInfo {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 10px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 10px;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -447,36 +447,36 @@ main section {
   }
 }
 main #hero {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 main #hero img {
   width: 100%;
 }
 main #featuredRecipes {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
   background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 20px 24px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   gap: 24px;
-  -ms-flex-item-align: stretch;
-      -ms-grid-row-align: stretch;
-      align-self: stretch;
+  padding: 20px 24px;
 }
 @media (min-width: 1200px) {
   main #featuredRecipes {
@@ -484,24 +484,24 @@ main #featuredRecipes {
   }
 }
 main #featuredRecipes .tiles {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -ms-flex-item-align: stretch;
       -ms-grid-row-align: stretch;
       align-self: stretch;
-  width: 100%;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 24px 112px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 24px 112px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  width: 100%;
 }
 main #featuredRecipes .tiles .recipeCard {
   -webkit-box-orient: vertical;
@@ -519,89 +519,89 @@ main #featuredRecipes .tiles .recipeCard .recipeInfo .desc {
   display: none;
 }
 main #resultsContent {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 20px 0px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   gap: 24px;
-  -ms-flex-item-align: stretch;
-      -ms-grid-row-align: stretch;
-      align-self: stretch;
+  padding: 20px 0px;
 }
 main #resultsContent .search {
   border: 1px solid #000;
 }
 main #resultsContent #filterResults {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 16px 24px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 24px;
   -ms-flex-item-align: stretch;
       -ms-grid-row-align: stretch;
       align-self: stretch;
   background: #F8E386;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 24px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 16px 24px;
 }
 @media (min-width: 1200px) {
   main #resultsContent #filterResults {
-    padding: 16px;
-    margin-left: 48px;
-    margin-right: 48px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    margin-left: 48px;
+    margin-right: 48px;
+    padding: 16px;
   }
 }
 main #resultsContent #filterResults .searchFilter {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 10px;
-  border-radius: 14.5px;
   background-color: white;
-}
-main #resultsContent #filterResults #cuisineFilterCat {
+  border-radius: 14.5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 10px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+main #resultsContent #filterResults #cuisineFilterCat {
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -ms-flex-line-pack: start;
-      align-content: flex-start;
-  gap: 24px;
   -ms-flex-item-align: stretch;
       -ms-grid-row-align: stretch;
       align-self: stretch;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  gap: 24px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 main #resultsContent #filterResults #cuisineFilterCat .cuisineFilter {
   border: 3px solid var(--orange);
@@ -611,16 +611,16 @@ main #resultsContent #filterResults #cuisineFilterCat .cuisineFilter.active {
   background: var(--orange);
 }
 main #resultsContent #filterResults #dietaryFilterCat {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   gap: 16px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 main #resultsContent #filterResults #dietaryFilterCat .dietaryFilter {
   padding: 7.5px 17px;
@@ -656,25 +656,25 @@ main #resultsContent #filterResults #dietaryFilterCat #veganFilter.active h3 {
   color: white;
 }
 main #resultsContent .results {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
   background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 20px 48px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 24px;
-  -ms-flex-item-align: stretch;
-      -ms-grid-row-align: stretch;
-      align-self: stretch;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  gap: 24px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 20px 48px;
 }
 main #resultsContent .results .recipeCard {
   -webkit-box-orient: vertical;
@@ -693,15 +693,15 @@ main #resultsContent .results .recipeCard .recipeInfo .desc {
 }
 @media (min-width: 1200px) {
   main #resultsContent .results {
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     -webkit-box-orient: initial;
     -webkit-box-direction: initial;
         -ms-flex-direction: initial;
             flex-direction: initial;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -ms-flex-line-pack: start;
-        align-content: flex-start;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     -webkit-box-pack: justify;
@@ -716,71 +716,71 @@ main #resultsContent .results .recipeCard .recipeInfo .desc {
     max-width: calc((100% - 120px) / 2);
   }
   main #resultsContent .results .recipeCard .cardImg {
+    height: 150px;
     padding: 0;
     width: 150px;
-    height: 150px;
   }
   main #resultsContent .results .recipeCard .cardImg img {
+    height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
     width: 100%;
-    height: 100%;
   }
   main #resultsContent .results .recipeCard .recipeInfo {
-    padding: 0, 0, 0, 10px;
     -webkit-box-flex: 1;
         -ms-flex: 1 0 0px;
             flex: 1 0 0;
+    padding: 0, 0, 0, 10px;
   }
   main #resultsContent .results .recipeCard .recipeInfo .desc {
-    display: initial;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    text-wrap: nowrap;
     -ms-flex-item-align: stretch;
         -ms-grid-row-align: stretch;
         align-self: stretch;
+    display: initial;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+    white-space: nowrap;
   }
   main #resultsContent .results.noRecipes {
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
     -webkit-box-orient: vertical !important;
     -webkit-box-direction: normal !important;
         -ms-flex-direction: column !important;
             flex-direction: column !important;
-    -webkit-box-align: center !important;
-        -ms-flex-align: center !important;
-            align-items: center !important;
   }
 }
 main #resultsContent .results #errorImg img {
-  width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  width: 100%;
 }
 main#recipe {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
   background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 20px;
-  padding-bottom: 20px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   gap: 48px;
-  -ms-flex-item-align: stretch;
-      -ms-grid-row-align: stretch;
-      align-self: stretch;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 main#recipe img {
-  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  width: 100%;
 }
 @media (min-width: 1200px) {
   main#recipe {
@@ -789,6 +789,12 @@ main#recipe img {
   }
 }
 main#recipe section {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -796,45 +802,29 @@ main#recipe section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -ms-flex-item-align: stretch;
-      -ms-grid-row-align: stretch;
-      align-self: stretch;
 }
 main#recipe #recipeIntro {
   gap: 24px;
 }
 @media (min-width: 1200px) {
   main#recipe #recipeIntro {
-    gap: 80px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
+    gap: 80px;
   }
   main#recipe #recipeIntro img {
     width: 440px;
   }
 }
 main#recipe #recipeIntro .recipeTitleContent {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  gap: 24px;
   -ms-flex-item-align: stretch;
       -ms-grid-row-align: stretch;
       align-self: stretch;
-}
-main#recipe #recipeIntro .recipeTitleContent .recipeTitleInfo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -842,18 +832,28 @@ main#recipe #recipeIntro .recipeTitleContent .recipeTitleInfo {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 24px;
+}
+main#recipe #recipeIntro .recipeTitleContent .recipeTitleInfo {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  gap: 8px;
-}
-main#recipe #recipeIntro .recipeTitleContent .recipeTitleInfo div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+}
+main#recipe #recipeIntro .recipeTitleContent .recipeTitleInfo div {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   gap: 32px;
 }
 main#recipe #ingredients {
@@ -861,17 +861,23 @@ main#recipe #ingredients {
 }
 @media (min-width: 1200px) {
   main#recipe #ingredients {
-    gap: 80px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    gap: 80px;
   }
   main#recipe #ingredients img {
     width: 440px;
   }
 }
 main#recipe #ingredients .ingredientsText {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -879,13 +885,7 @@ main#recipe #ingredients .ingredientsText {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
   gap: 16px;
-  -ms-flex-item-align: stretch;
-      -ms-grid-row-align: stretch;
-      align-self: stretch;
 }
 main#recipe #ingredients .ingredientsText ul {
   line-height: 1.5rem;
@@ -894,6 +894,12 @@ main#recipe #instructions {
   gap: 16px;
 }
 main#recipe #instructions .steps {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -901,29 +907,25 @@ main#recipe #instructions .steps {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
   gap: 36px;
-  -ms-flex-item-align: stretch;
-      -ms-grid-row-align: stretch;
-      align-self: stretch;
 }
 @media (min-width: 1200px) {
   main#recipe #instructions .steps {
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -ms-flex-line-pack: start;
-        align-content: flex-start;
-    gap: 36px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    gap: 36px;
   }
 }
 main#recipe #instructions .steps .step {
-  max-width: 472px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -931,47 +933,45 @@ main#recipe #instructions .steps .step {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
   gap: 24px;
+  max-width: 472px;
 }
 main#recipe #instructions .steps .step img {
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
-  height: 100%;
 }
 main#recipe #instructions .steps .step .stepInfo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  gap: 16px;
   -ms-flex-item-align: stretch;
       -ms-grid-row-align: stretch;
       align-self: stretch;
-}
-main#recipe #instructions .steps .step .stepInfo .stepNum {
-  border-radius: 16px;
-  background: var(--yellow);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 32px !important;
-  height: 32px;
+  gap: 16px;
+}
+main#recipe #instructions .steps .step .stepInfo .stepNum {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: var(--yellow);
+  border-radius: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: 32px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  width: 32px !important;
 }
 main#recipe #instructions .steps .step .stepInfo p {
   width: calc(100% - 48px);
@@ -986,8 +986,8 @@ main #help {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 16px;
-  padding-top: 20px;
   padding-bottom: 20px;
+  padding-top: 20px;
 }
 
 /* =============
@@ -1000,11 +1000,11 @@ body {
 p,
 .headerButton,
 .search {
-  margin: 0;
   font-size: 1rem;
-  line-height: normal;
   font-style: normal;
   font-weight: 400;
+  line-height: normal;
+  margin: 0;
 }
 p.cuisine,
 .headerButton.cuisine,
@@ -1051,29 +1051,28 @@ h5 {
 }
 
 .noLink a {
-  text-decoration: none !important;
   color: black;
+  text-decoration: none !important;
 }
 
 /* =============
     Buttons
 ============= */
 .headerButton {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 10px;
+  border-radius: 14px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-radius: 14px;
+  gap: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
 }
 .headerButton .buttonState {
-  padding: 20px 30px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1087,62 +1086,63 @@ h5 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 20px 30px;
 }
 
 #filterButton {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: var(--yellow);
+  border: 0.5px solid #000;
+  border-radius: 16px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 56px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   height: 56px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+  width: 56px;
+}
+#filterButton .buttonState {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  border-radius: 16px;
-  border: 0.5px solid #000;
-  background: var(--yellow);
-  -webkit-transition: background-color 0.5s ease;
-  transition: background-color 0.5s ease;
-}
-#filterButton .buttonState {
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-flex: 1;
       -ms-flex: 1 0 0px;
           flex: 1 0 0;
-  -ms-flex-item-align: stretch;
-      -ms-grid-row-align: stretch;
-      align-self: stretch;
 }
 #filterButton .buttonState .fa-filter {
   font-size: 1.75rem;
 }
 #filterButton.disabled {
-  border: 0;
   background-color: #959595;
+  border: 0;
 }
 #filterButton.disabled .fa-filter {
   color: #4D4D4D;
 }
 
 .buttonState {
-  width: 100%;
-  border-radius: 14px;
   background-color: rgba(255, 255, 255, 0);
+  border-radius: 14px;
   -webkit-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
+  width: 100%;
 }
 
 .headerButton .buttonState:hover,
@@ -1190,27 +1190,26 @@ input[type=text] {
     Search
 ============= */
 .search {
-  max-width: 240px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: white;
   border-radius: 12px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 10px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 16px;
   -webkit-box-flex: 1;
       -ms-flex: 1 0 0px;
           flex: 1 0 0;
+  gap: 16px;
+  max-width: 240px;
+  padding: 10px;
 }
 
 /* =============
     Header
 ============= */
 header {
-  padding: 20px 48px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1218,6 +1217,7 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 20px 48px;
 }
 @media (min-width: 1200px) {
   header {
@@ -1231,17 +1231,17 @@ header {
   }
 }
 header #headerLeft {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 40px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 40px;
 }
 @media (min-width: 1200px) {
   header #headerLeft {
@@ -1252,8 +1252,6 @@ header #headerLeft {
   }
 }
 header #headerLeft #mobileDoubleHeader {
-  width: 100%;
-  height: 120px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1264,9 +1262,11 @@ header #headerLeft #mobileDoubleHeader {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  height: 120px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 100%;
 }
 header #headerLeft #mobileDoubleHeader #logo {
   width: 120px;
@@ -1276,21 +1276,21 @@ header #headerLeft #mobileDoubleHeader .mobileSearch {
 }
 header #headerLeft #mobileDoubleHeader .fa-bars {
   font-size: 3rem;
-  padding: 8px;
   height: 100%;
+  padding: 8px;
 }
 header #headerLeft .headerNav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 20px;
   width: 100%;
 }
 @media (min-width: 1200px) {
@@ -1305,17 +1305,17 @@ header #headerLeft .headerNav {
   }
 }
 header #headerRight {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 20px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 20px;
 }
 @media (min-width: 1200px) {
   header #headerRight {
@@ -1350,6 +1350,9 @@ header.open #mobileDoubleHeader #logo {
     Footer
 ============= */
 footer {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1357,9 +1360,6 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   gap: 80px;
   padding: 20px 0px;
   width: 100%;
@@ -1370,14 +1370,16 @@ footer {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    gap: 100px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    gap: 100px;
   }
 }
 footer #footerContent {
-  margin: 0px 24px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1385,41 +1387,39 @@ footer #footerContent {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   gap: 50px;
+  margin: 0px 24px;
 }
 @media (min-width: 1200px) {
   footer #footerContent {
-    gap: 75px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    gap: 75px;
   }
 }
 footer #footerContent i {
   font-size: 2rem;
 }
 footer #footerContent #footerLinks ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  gap: 16px 31px;
   -ms-flex-item-align: stretch;
       -ms-grid-row-align: stretch;
       align-self: stretch;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px 31px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 489px;
 }
 footer #footerContent #footerLinks ul a {
@@ -1429,6 +1429,9 @@ footer #footerContent #footerLinks ul a p {
   width: 99px;
 }
 footer #footerContent #footerApp {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1436,32 +1439,29 @@ footer #footerContent #footerApp {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   gap: 16px;
 }
 footer #footerContent #footerApp div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   gap: 23px;
 }
 footer #footerContent #footerSocial {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   gap: 16px;
-  -ms-flex-item-align: stretch;
-      -ms-grid-row-align: stretch;
-      align-self: stretch;
 }
