@@ -28,11 +28,8 @@ header {
             height: 120px;
             justify-content: space-between;
             width: 100%;
-            // @include xl{
-            //     gap: 0;
-            // }
 
-            #logo {
+            .headerLogo {
                 width: 120px;
             }
 
@@ -94,7 +91,7 @@ header {
         #mobileDoubleHeader {
             gap: 40px;
 
-            #logo {
+            .headerLogo {
                 display: none !important;
             }
         }

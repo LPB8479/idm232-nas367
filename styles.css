@@ -1268,7 +1268,7 @@ header #headerLeft #mobileDoubleHeader {
           justify-content: space-between;
   width: 100%;
 }
-header #headerLeft #mobileDoubleHeader #logo {
+header #headerLeft #mobileDoubleHeader .headerLogo {
   width: 120px;
 }
 header #headerLeft #mobileDoubleHeader .mobileSearch {
@@ -1342,7 +1342,7 @@ header.open {
 header.open #mobileDoubleHeader {
   gap: 40px;
 }
-header.open #mobileDoubleHeader #logo {
+header.open #mobileDoubleHeader .headerLogo {
   display: none !important;
 }
 

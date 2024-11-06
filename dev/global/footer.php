@@ -1,13 +1,13 @@
 <!--Footer-->
 <footer>
-    <a href="index.html">
+    <a href="index.php">
         <img id="logo" src="https://placehold.co/120" alt="logo">
     </a>
     <div id="footerContent">
         <section id="footerLinks">
             <ul class="noLink blankList ">
                 <li>
-                    <a href="recipe.html">
+                    <a href="recipe.php">
                         <p>Dishes</p>
                     </a>
                 </li>
@@ -62,7 +62,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="help.html">
+                    <a href="help.php">
                         <p>Help</p>
                     </a>
                 </li>

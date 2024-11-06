@@ -2,11 +2,11 @@
 <header class="closed">
     <div id="headerLeft">
         <div id="mobileDoubleHeader">
-            <a href="index.html">
+            <a href="index.php">
                 <img id="logo" src="https://placehold.co/120" alt="logo">
             </a>
             <div class="mobileOnly mobileSearch search">
-                <!-- @import "search.kit"-->
+                <?php include 'dev/global/search.php'; ?>
             </div>
             <div id="hamburger">
                 <i class="fa-solid fa-bars mobileOnly"></i>
@@ -14,7 +14,7 @@
         </div>
         <ul class="noLink blankList headerNav">
             <li class="headerButton">
-                <a  href="recipe.html" class="buttonState">
+                <a href="recipe.php" class="buttonState">
                     <p>DISHES</p>
                 </a>
             </li>
@@ -34,7 +34,7 @@
                 </a>
             </li>
             <li class="headerButton">
-                <a  href="help.html" class="buttonState">
+                <a href="help.php" class="buttonState">
                     <p>HELP</p>
                 </a>
             </li>
@@ -42,7 +42,7 @@
     </div>
     <div id="headerRight">
         <div class="desktopSearch desktopOnly search">
-            <!-- @import "search.kit"-->
+            <?php include 'dev/global/search.php'; ?>
         </div>
         <ul class="noLink blankList headerNav">
             <li class="headerButton">

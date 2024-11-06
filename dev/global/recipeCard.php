@@ -1,5 +1,5 @@
 <!--Recipe Card-->
-<a class="recipeCard" href="recipe.html">
+<a class="recipeCard" href="recipe.php">
     <div class="cardImg">
         <img src="https://placehold.co/174x174" alt="">
     </div>
