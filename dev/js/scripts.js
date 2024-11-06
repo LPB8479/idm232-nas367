@@ -15,7 +15,7 @@ function simulateSearch() {
     const searches = document.querySelectorAll(".search");
     searches.forEach((search) => {
         search.addEventListener("click", () => {
-            window.location.href = 'results.html'
+            window.location.href = 'results.php'
         })
     })
 }
