@@ -344,6 +344,7 @@ ul.blankList {
   display: -ms-flexbox;
   display: flex;
   gap: 10px;
+  cursor: pointer;
 }
 
 @media (min-width: 1200px) {
