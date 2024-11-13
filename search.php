@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php include 'dev/global/head.php'; ?>
+<?php
+    include 'dev/global/head.php';
+    //sanitize input
+       $queryString = isset($_GET['query']) ? urldecode($_GET['query']) : '';
+       $queryString = htmlspecialchars($queryString, ENT_QUOTES, 'UTF-8');
+?>
 
 <body>
     <?php include 'dev/global/header.php'; ?>
     <main>
         <section id="resultsContent">
             <h1>Search Results</h1>
+            <!-- <?php echo "<p>$queryString</p>" ?> -->
             <div class="searchFilter">
                 <div class="search">
-                    <?php include 'dev/global/search.php'; ?>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <form action="search.php" method="get">
+                         <input type="text" name="query" placeholder="<?php echo $queryString?>">
+                    </form>
                 </div>
                 <div id="filterButton">
                     <div class="buttonState">

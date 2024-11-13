@@ -11,16 +11,6 @@ function hamburger() {
 }
 hamburger();
 
-function simulateSearch() {
-    const searches = document.querySelectorAll(".search");
-    searches.forEach((search) => {
-        search.addEventListener("click", () => {
-            window.location.href = 'results.php'
-        })
-    })
-}
-simulateSearch()
-
 function filterMenu() {
     //collapse filter menu
     const filterButton = document.getElementById("filterButton");

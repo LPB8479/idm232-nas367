@@ -6,7 +6,10 @@
                 <img id="logo" src="https://placehold.co/120" alt="logo">
             </a>
             <div class="mobileOnly mobileSearch search">
-                <?php include 'dev/global/search.php'; ?>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <form action="search.php" method="get">
+                    <input type="text" name="query" placeholder="Search">
+                </form>
             </div>
             <div id="hamburger">
                 <i class="fa-solid fa-bars mobileOnly"></i>
@@ -42,7 +45,10 @@
     </div>
     <div id="headerRight">
         <div class="desktopSearch desktopOnly search">
-            <?php include 'dev/global/search.php'; ?>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <form action="search.php" method="get">
+                <input type="text" name="query" placeholder="Search">
+            </form>
         </div>
         <ul class="noLink blankList headerNav">
             <li class="headerButton">
