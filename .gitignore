@@ -11,6 +11,7 @@
 .Trashes
 .VolumeIcon.icns
 .com.apple.timemachine.donotpresent
+.php-cs-fixer.php
 
 ### Windows ###
 # Windows thumbnail cache files
