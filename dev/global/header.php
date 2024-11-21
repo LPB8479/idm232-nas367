@@ -3,7 +3,7 @@
     <div id="headerLeft">
         <div id="mobileDoubleHeader">
             <a href="index.php">
-                <img id="logo" src="https://placehold.co/120" alt="logo">
+                <img id="logo" src="assets/logo.png" alt="logo" width="120" height="120">
             </a>
             <div class="mobileOnly mobileSearch search">
                 <i class="fa-solid fa-magnifying-glass"></i>
