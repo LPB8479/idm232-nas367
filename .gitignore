@@ -26,4 +26,8 @@ ehthumbs_vista.db
 *.ai
 *.mp4
 
+### Database login info ###
+.htaccess
+.htaccess.production
+
 ### Compiler Logs ###
