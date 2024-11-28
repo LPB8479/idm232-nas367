@@ -17,7 +17,7 @@
         </div>
         <ul class="noLink blankList headerNav">
             <li class="headerButton">
-                <a href="recipe.php" class="buttonState">
+                <a href="" class="buttonState">
                     <p>DISHES</p>
                 </a>
             </li>
