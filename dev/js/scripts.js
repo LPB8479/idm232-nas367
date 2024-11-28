@@ -40,3 +40,9 @@ function filterMenu() {
     }
 }
 filterMenu();
+
+//Fix height
+const recipeError = document.getElementById("recipeError");
+if (recipeError) {
+    recipeError.style.height = window.innerHeight - document.querySelector("header").offsetHeight - document.querySelector("footer").offsetHeight + 'px';
+}

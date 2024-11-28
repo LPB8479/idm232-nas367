@@ -738,20 +738,11 @@ main #resultsContent .results .recipeCard .recipeInfo .desc {
     text-wrap: nowrap;
     white-space: nowrap;
   }
-  main #resultsContent .results.noRecipes {
-    -webkit-box-align: center !important;
-        -ms-flex-align: center !important;
-            align-items: center !important;
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: column !important;
-            flex-direction: column !important;
-  }
 }
 main #resultsContent .results #errorImg img {
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  height: calc(100vh - 495.311px);
+  -o-object-fit: contain;
+     object-fit: contain;
   width: 100%;
 }
 main#recipe {
@@ -985,6 +976,38 @@ main#recipe #instructions .steps .step .stepInfo .stepText {
       -ms-flex-align: start;
           align-items: flex-start;
   gap: 8px;
+}
+main#recipe #recipeError {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: column !important;
+          flex-direction: column !important;
+  gap: 24px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px 48px;
+}
+main#recipe #recipeError #errorImg {
+  height: 100%;
+}
+main#recipe #recipeError #errorImg img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
 }
 main #help {
   background-color: white;

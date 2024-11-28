@@ -306,17 +306,12 @@ main {
                         }
                     }
                 }
-
-                &.noRecipes {
-                    align-items: center !important;
-                    flex-direction: column !important;
-                }
             }
 
             #errorImg {
                 img {
-                    height: 100%;
-                    object-fit: cover;
+                    height: calc(100vh - 495.311px);
+                    object-fit: contain;
                     width: 100%;
                 }
             }
@@ -379,8 +374,8 @@ main {
                         align-items: flex-start;
                         display: flex;
                         gap: 32px;
-                        
-                        .time{
+
+                        .time {
                             gap: 10px;
                         }
                     }
@@ -472,6 +467,27 @@ main {
                     }
                 }
 
+            }
+        }
+
+        #recipeError {
+            align-content: center;
+            align-items: center;
+            align-self: stretch;
+            background-color: white;
+            display: flex;
+            flex-direction: column !important;
+            gap: 24px;
+            justify-content: center;
+            padding: 20px 48px;
+
+            #errorImg {
+                height: 100%;
+                img {
+                    height: 100%;
+                    object-fit: cover;
+                    width: 100%;
+                }
             }
         }
     }

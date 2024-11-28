@@ -99,7 +99,13 @@ $result = $statement->get_result();
     else :
         ?>
         <!-- recipe not found -->
-        <main>
+        <main id="recipe">
+            <div id="recipeError">
+                <h2>Recipe Not Found</h2>
+                <div id="errorImg">
+                    <img src="assets/errorImage.png" alt="error image">
+                </div>
+            </div>
         </main>
     <?php
     endif;
