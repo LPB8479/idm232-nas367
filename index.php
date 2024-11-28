@@ -9,9 +9,9 @@ $featured = $statement->get_result()->fetch_all(MYSQLI_ASSOC);
 <body>
     <?php include 'dev/global/header.php'; ?>
     <main>
-        <!-- <section id="hero">
+        <section id="hero">
             <img src="https://placehold.co/1344x756" alt="">
-        </section> -->
+        </section>
         <section id="featuredRecipes">
             <h1>Featured Recipes</h1>
             <div class="tiles noLink">
