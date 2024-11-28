@@ -21,7 +21,7 @@ $featured = $statement->get_result()->fetch_all(MYSQLI_ASSOC);
                             <img
                                 src="assets/<?php echo htmlspecialchars($recipe['imgFolder']) . "/" . htmlspecialchars($recipe['titleImg']); ?>"
                                 alt="<?php echo htmlspecialchars($recipe['title']); ?>"
-                                height="174"urldecode
+                                height="174"
                                 width="174">
                         </div>
                         <div class="recipeInfo">
