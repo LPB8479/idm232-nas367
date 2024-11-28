@@ -44,6 +44,7 @@ ul.blankList {
 .time {
     flex-direction: row;
     gap: 10px;
+    align-items: center;
 }
 
 .recipeCard {
@@ -371,7 +372,7 @@ main {
                     gap: 8px;
 
                     div {
-                        align-items: flex-start;
+                        align-items: center;
                         display: flex;
                         gap: 32px;
 

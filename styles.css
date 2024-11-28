@@ -385,6 +385,9 @@ ul.blankList {
       -ms-flex-direction: row;
           flex-direction: row;
   gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .recipeCard {
@@ -835,9 +838,9 @@ main#recipe #recipeIntro .recipeTitleContent .recipeTitleInfo {
   gap: 8px;
 }
 main#recipe #recipeIntro .recipeTitleContent .recipeTitleInfo div {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
