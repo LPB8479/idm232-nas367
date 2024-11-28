@@ -852,6 +852,9 @@ main#recipe #recipeIntro .recipeTitleContent .recipeTitleInfo div {
   display: flex;
   gap: 32px;
 }
+main#recipe #recipeIntro .recipeTitleContent .recipeTitleInfo div .time {
+  gap: 10px;
+}
 main#recipe #ingredients {
   gap: 24px;
 }
