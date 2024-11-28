@@ -33,10 +33,8 @@ $featured = $statement->get_result()->fetch_all(MYSQLI_ASSOC);
                                 <p class="cuisine"><?php echo htmlspecialchars($recipe['cuisine']) ?></p>
                             </div>
                             <div class="time">
-                                <p>
-                                    <i class="fa-solid fa-clock"></i>
-                                    <?php echo htmlspecialchars($recipe['cookTime']) ?> Minutes
-                            </p>
+                                <i class="fa-solid fa-clock"></i>
+                                <p><?php echo htmlspecialchars($recipe['cookTime']) ?> Minutes</p>
                             </div>
                         </div>
                     </a>
