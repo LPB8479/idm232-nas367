@@ -52,7 +52,7 @@ ul.blankList {
     display: flex;
     flex-direction: column;
     padding: 10px 0px;
-    width: fit-content;
+    // width: fit-content;
 
     div {
         display: flex;
@@ -125,6 +125,7 @@ main {
 
             .recipeCard {
                 flex-direction: column;
+                width: 252px !important;
 
                 .cardImg {
                     padding: 0 39px;
@@ -132,10 +133,6 @@ main {
 
                 .recipeInfo {
                     padding: 10px;
-
-                    .desc {
-                        display: none;
-                    }
                 }
             }
         }

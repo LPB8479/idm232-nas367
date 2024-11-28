@@ -400,9 +400,6 @@ ul.blankList {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 10px 0px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
 }
 .recipeCard div {
   display: -webkit-box;
@@ -509,15 +506,13 @@ main #featuredRecipes .tiles .recipeCard {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 252px !important;
 }
 main #featuredRecipes .tiles .recipeCard .cardImg {
   padding: 0 39px;
 }
 main #featuredRecipes .tiles .recipeCard .recipeInfo {
   padding: 10px;
-}
-main #featuredRecipes .tiles .recipeCard .recipeInfo .desc {
-  display: none;
 }
 main #resultsContent {
   -webkit-box-align: center;
