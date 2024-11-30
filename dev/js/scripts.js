@@ -43,6 +43,7 @@ filterMenu();
 
 //Fix height
 const recipeError = document.getElementById("recipeError");
+const resultsHeaderHeight = (document.getElementById("resultsHeader")) ? Math.ceil(document.getElementById("resultsHeader").offsetHeight) : 0;
 if (recipeError) {
-    recipeError.style.height = window.innerHeight - document.querySelector("header").offsetHeight - document.querySelector("footer").offsetHeight + 'px';
+    recipeError.style.height = (window.innerHeight - document.querySelector("header").offsetHeight - resultsHeaderHeight - document.querySelector("footer").offsetHeight - 40) + 'px';
 }

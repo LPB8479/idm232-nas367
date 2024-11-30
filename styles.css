@@ -531,13 +531,15 @@ main #resultsContent {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 24px;
   padding: 20px 0px;
 }
-main #resultsContent .search {
+main #resultsContent #resultsHeader {
+  padding-bottom: 24px;
+}
+main #resultsContent #resultsHeader .search {
   border: 1px solid #000;
 }
-main #resultsContent #filterResults {
+main #resultsContent #resultsHeader #filterResults {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -559,7 +561,7 @@ main #resultsContent #filterResults {
   padding: 16px 24px;
 }
 @media (min-width: 1200px) {
-  main #resultsContent #filterResults {
+  main #resultsContent #resultsHeader #filterResults {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -569,7 +571,7 @@ main #resultsContent #filterResults {
     padding: 16px;
   }
 }
-main #resultsContent #filterResults .searchFilter {
+main #resultsContent #resultsHeader #filterResults .searchFilter {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -583,7 +585,7 @@ main #resultsContent #filterResults .searchFilter {
       -ms-flex-pack: center;
           justify-content: center;
 }
-main #resultsContent #filterResults #cuisineFilterCat {
+main #resultsContent #resultsHeader #filterResults #cuisineFilterCat {
   -ms-flex-line-pack: start;
       align-content: flex-start;
   -webkit-box-align: start;
@@ -602,14 +604,14 @@ main #resultsContent #filterResults #cuisineFilterCat {
       -ms-flex-pack: center;
           justify-content: center;
 }
-main #resultsContent #filterResults #cuisineFilterCat .cuisineFilter {
+main #resultsContent #resultsHeader #filterResults #cuisineFilterCat .cuisineFilter {
   border: 3px solid var(--orange);
   padding: 10.5px 17px;
 }
-main #resultsContent #filterResults #cuisineFilterCat .cuisineFilter.active {
+main #resultsContent #resultsHeader #filterResults #cuisineFilterCat .cuisineFilter.active {
   background: var(--orange);
 }
-main #resultsContent #filterResults #dietaryFilterCat {
+main #resultsContent #resultsHeader #filterResults #dietaryFilterCat {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -621,37 +623,37 @@ main #resultsContent #filterResults #dietaryFilterCat {
       -ms-flex-pack: center;
           justify-content: center;
 }
-main #resultsContent #filterResults #dietaryFilterCat .dietaryFilter {
+main #resultsContent #resultsHeader #filterResults #dietaryFilterCat .dietaryFilter {
   padding: 7.5px 17px;
 }
-main #resultsContent #filterResults #dietaryFilterCat #pescFilter {
+main #resultsContent #resultsHeader #filterResults #dietaryFilterCat #pescFilter {
   border: 3px solid #947729;
 }
-main #resultsContent #filterResults #dietaryFilterCat #pescFilter h3 {
+main #resultsContent #resultsHeader #filterResults #dietaryFilterCat #pescFilter h3 {
   color: #947729;
   font-weight: 700;
 }
-main #resultsContent #filterResults #dietaryFilterCat #pescFilter.active {
+main #resultsContent #resultsHeader #filterResults #dietaryFilterCat #pescFilter.active {
   background-color: #947729;
 }
-main #resultsContent #filterResults #dietaryFilterCat #pescFilter.active h3 {
+main #resultsContent #resultsHeader #filterResults #dietaryFilterCat #pescFilter.active h3 {
   color: white;
 }
-main #resultsContent #filterResults #dietaryFilterCat #vegetarianFilter,
-main #resultsContent #filterResults #dietaryFilterCat #veganFilter {
+main #resultsContent #resultsHeader #filterResults #dietaryFilterCat #vegetarianFilter,
+main #resultsContent #resultsHeader #filterResults #dietaryFilterCat #veganFilter {
   border: 3px solid #749429;
 }
-main #resultsContent #filterResults #dietaryFilterCat #vegetarianFilter h3,
-main #resultsContent #filterResults #dietaryFilterCat #veganFilter h3 {
+main #resultsContent #resultsHeader #filterResults #dietaryFilterCat #vegetarianFilter h3,
+main #resultsContent #resultsHeader #filterResults #dietaryFilterCat #veganFilter h3 {
   color: #749429;
   font-weight: 700;
 }
-main #resultsContent #filterResults #dietaryFilterCat #vegetarianFilter.active,
-main #resultsContent #filterResults #dietaryFilterCat #veganFilter.active {
+main #resultsContent #resultsHeader #filterResults #dietaryFilterCat #vegetarianFilter.active,
+main #resultsContent #resultsHeader #filterResults #dietaryFilterCat #veganFilter.active {
   background-color: #749429;
 }
-main #resultsContent #filterResults #dietaryFilterCat #vegetarianFilter.active h3,
-main #resultsContent #filterResults #dietaryFilterCat #veganFilter.active h3 {
+main #resultsContent #resultsHeader #filterResults #dietaryFilterCat #vegetarianFilter.active h3,
+main #resultsContent #resultsHeader #filterResults #dietaryFilterCat #veganFilter.active h3 {
   color: white;
 }
 main #resultsContent .results {
@@ -741,12 +743,6 @@ main #resultsContent .results .recipeCard .recipeInfo .desc {
     text-wrap: nowrap;
     white-space: nowrap;
   }
-}
-main #resultsContent .results #errorImg img {
-  height: calc(100vh - 495.311px);
-  -o-object-fit: contain;
-     object-fit: contain;
-  width: 100%;
 }
 main#recipe {
   -webkit-box-align: center;
@@ -980,16 +976,33 @@ main#recipe #instructions .steps .step .stepInfo .stepText {
           align-items: flex-start;
   gap: 8px;
 }
-main#recipe #recipeError {
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+main #help {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+main #recipeError {
+  -ms-flex-line-pack: center !important;
+      align-content: center !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
   -ms-flex-item-align: stretch;
       -ms-grid-row-align: stretch;
       align-self: stretch;
+  background-image: url("assets/errorImage.png") !important;
+  background-size: contain;
   background-color: white;
+  background-repeat: no-repeat;
+  background-position: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1003,27 +1016,8 @@ main#recipe #recipeError {
           justify-content: center;
   padding: 20px 48px;
 }
-main#recipe #recipeError #errorImg {
-  height: 100%;
-}
-main#recipe #recipeError #errorImg img {
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-}
-main #help {
-  background-color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 16px;
-  padding-bottom: 20px;
-  padding-top: 20px;
+main #recipeError h2 {
+  text-align: center;
 }
 
 /* =============

@@ -17,7 +17,7 @@
         </div>
         <ul class="noLink blankList headerNav">
             <li class="headerButton">
-                <a href="" class="buttonState">
+                <a href="search.php?query=" class="buttonState">
                     <p>DISHES</p>
                 </a>
             </li>
