@@ -32,16 +32,35 @@ ul.blankList {
     }
 }
 
-.cuisineTag {
-    align-items: center;
-    background: #BFBFBF;
-    border-radius: 14.5px;
-    justify-content: center;
-    padding: 6px 12px;
-    width: fit-content;
+.tags{
+    display: flex;
+    gap: 10px;
+    a{
+        display: flex;
+        align-items: center;
+        border-radius: 14.5px;
+        justify-content: center;
+        padding: 6px 12px;
+        width: fit-content;
+    }
+    .cuisineTag {
+        background: #BFBFBF;
+    }
+    .vegetarian {
+        background: var(--vegetarian);
+        color: white;
+    }
+    .pescatarian{
+        background: var(--pesc);
+        color: white;
+    }
+    .vegan{
+        background: var(--vegan);
+    }
 }
 
 .time {
+    display: flex;
     flex-direction: row;
     gap: 10px;
     align-items: center;
@@ -148,6 +167,9 @@ main {
         
         #resultsHeader{
             padding-bottom: 24px;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
             .search {
                 border: 1px solid #000;
             }
@@ -161,6 +183,7 @@ main {
                 gap: 24px;
                 justify-content: center;
                 padding: 16px 24px;
+                margin-top: 24px;
     
                 @include xl {
                     flex-direction: row;
@@ -208,7 +231,7 @@ main {
                     }
     
                     #pescFilter {
-                        border: 3px solid #947729;
+                        border: 3px solid var(--pesc);
     
                         h3 {
                             color: #947729;
@@ -216,7 +239,7 @@ main {
                         }
     
                         &.active {
-                            background-color: #947729;
+                            background-color: var(--pesc);
     
                             h3 {
                                 color: white;
@@ -224,17 +247,32 @@ main {
                         }
                     }
     
-                    #vegetarianFilter,
-                    #veganFilter {
-                        border: 3px solid #749429;
+                    #vegetarianFilter {
+                        border: 3px solid var(--vegetarian);
     
                         h3 {
-                            color: #749429;
+                            color: var(--vegetarian);
                             font-weight: 700;
                         }
     
                         &.active {
-                            background-color: #749429;
+                            background-color: var(--vegetarian);
+    
+                            h3 {
+                                color: white;
+                            }
+                        }
+                    }
+                    #veganFilter {
+                        border: 3px solid var(--vegan);
+    
+                        h3 {
+                            color: var(--vegan);
+                            font-weight: 700;
+                        }
+    
+                        &.active {
+                            background-color: var(--vegan);
     
                             h3 {
                                 color: white;
@@ -366,7 +404,7 @@ main {
                     flex-direction: column;
                     gap: 8px;
 
-                    div {
+                    > div {
                         align-items: center;
                         display: flex;
                         gap: 32px;
@@ -414,12 +452,13 @@ main {
                 display: flex;
                 flex-direction: column;
                 gap: 36px;
+                justify-content: center;
 
                 @include xl {
                     align-content: flex-start;
                     flex-direction: row;
                     flex-wrap: wrap;
-                    gap: 36px;
+                    gap: 48px;
                 }
 
                 .step {

@@ -37,8 +37,13 @@ $result = $statement->get_result();
                             <h1><?php echo htmlspecialchars(urldecode($row['title'])); ?></h1>
                             <h3><?php echo htmlspecialchars(urldecode($row['subtitle'])); ?></h3>
                             <div>
-                                <div class="cuisineTag">
-                                    <p class="cuisine"><?php echo htmlspecialchars($row['cuisine']); ?></p>
+                                <div class="tags noLink">
+                                    <a href="" class="cuisineTag <?php echo htmlspecialchars(strtolower($row['cuisine'])) ?>">
+                                        <p class="tag"><?php echo htmlspecialchars($row['cuisine']) ?></p>
+                                    </a>
+                                    <a href="" class="dietaryTag <?php echo htmlspecialchars(strtolower($row['dietaryPref'])) ?>">
+                                        <p class="tag"><?php echo htmlspecialchars($row['dietaryPref']) ?></p>
+                                    </a>
                                 </div>
                                 <div class="time">
                                     <i class="fa-solid fa-clock"></i>

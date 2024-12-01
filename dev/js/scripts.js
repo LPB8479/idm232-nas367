@@ -41,6 +41,21 @@ function filterMenu() {
 }
 filterMenu();
 
+function tagLink() {
+    const cuisineTags = document.querySelectorAll(".cuisineTag")
+    cuisineTags.forEach((cuisineTag) => {
+        const cuisine = cuisineTag.children[0].innerHTML.toLowerCase();
+        cuisineTag.setAttribute('href', `search.php?cuisine=${cuisine}`);
+    })
+
+    const dietaryTags = document.querySelectorAll(".dietaryTag")
+    dietaryTags.forEach((dietaryTag) => {
+        const cuisine = dietaryTag.children[0].innerHTML.toLowerCase();
+        dietaryTag.setAttribute('href', `search.php?tag=${cuisine}`);
+    })
+}
+tagLink();
+
 //Fix height
 const recipeError = document.getElementById("recipeError");
 const resultsHeaderHeight = (document.getElementById("resultsHeader")) ? Math.ceil(document.getElementById("resultsHeader").offsetHeight) : 0;

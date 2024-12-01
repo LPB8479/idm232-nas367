@@ -8,6 +8,9 @@
 :root {
   --yellow: #F4D136;
   --orange: #E39418;
+  --pesc: #947729;
+  --vegetarian: #4D9429;
+  --vegan: #8DD669;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -364,11 +367,19 @@ ul.blankList {
   }
 }
 
-.cuisineTag {
+.tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+.tags a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #BFBFBF;
   border-radius: 14.5px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -378,8 +389,25 @@ ul.blankList {
   width: -moz-fit-content;
   width: fit-content;
 }
+.tags .cuisineTag {
+  background: #BFBFBF;
+}
+.tags .vegetarian {
+  background: var(--vegetarian);
+  color: white;
+}
+.tags .pescatarian {
+  background: var(--pesc);
+  color: white;
+}
+.tags .vegan {
+  background: var(--vegan);
+}
 
 .time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -535,6 +563,16 @@ main #resultsContent {
 }
 main #resultsContent #resultsHeader {
   padding-bottom: 24px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 main #resultsContent #resultsHeader .search {
   border: 1px solid #000;
@@ -559,6 +597,7 @@ main #resultsContent #resultsHeader #filterResults {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 16px 24px;
+  margin-top: 24px;
 }
 @media (min-width: 1200px) {
   main #resultsContent #resultsHeader #filterResults {
@@ -627,32 +666,41 @@ main #resultsContent #resultsHeader #filterResults #dietaryFilterCat .dietaryFil
   padding: 7.5px 17px;
 }
 main #resultsContent #resultsHeader #filterResults #dietaryFilterCat #pescFilter {
-  border: 3px solid #947729;
+  border: 3px solid var(--pesc);
 }
 main #resultsContent #resultsHeader #filterResults #dietaryFilterCat #pescFilter h3 {
   color: #947729;
   font-weight: 700;
 }
 main #resultsContent #resultsHeader #filterResults #dietaryFilterCat #pescFilter.active {
-  background-color: #947729;
+  background-color: var(--pesc);
 }
 main #resultsContent #resultsHeader #filterResults #dietaryFilterCat #pescFilter.active h3 {
   color: white;
 }
-main #resultsContent #resultsHeader #filterResults #dietaryFilterCat #vegetarianFilter,
-main #resultsContent #resultsHeader #filterResults #dietaryFilterCat #veganFilter {
-  border: 3px solid #749429;
+main #resultsContent #resultsHeader #filterResults #dietaryFilterCat #vegetarianFilter {
+  border: 3px solid var(--vegetarian);
 }
-main #resultsContent #resultsHeader #filterResults #dietaryFilterCat #vegetarianFilter h3,
-main #resultsContent #resultsHeader #filterResults #dietaryFilterCat #veganFilter h3 {
-  color: #749429;
+main #resultsContent #resultsHeader #filterResults #dietaryFilterCat #vegetarianFilter h3 {
+  color: var(--vegetarian);
   font-weight: 700;
 }
-main #resultsContent #resultsHeader #filterResults #dietaryFilterCat #vegetarianFilter.active,
-main #resultsContent #resultsHeader #filterResults #dietaryFilterCat #veganFilter.active {
-  background-color: #749429;
+main #resultsContent #resultsHeader #filterResults #dietaryFilterCat #vegetarianFilter.active {
+  background-color: var(--vegetarian);
 }
-main #resultsContent #resultsHeader #filterResults #dietaryFilterCat #vegetarianFilter.active h3,
+main #resultsContent #resultsHeader #filterResults #dietaryFilterCat #vegetarianFilter.active h3 {
+  color: white;
+}
+main #resultsContent #resultsHeader #filterResults #dietaryFilterCat #veganFilter {
+  border: 3px solid var(--vegan);
+}
+main #resultsContent #resultsHeader #filterResults #dietaryFilterCat #veganFilter h3 {
+  color: var(--vegan);
+  font-weight: 700;
+}
+main #resultsContent #resultsHeader #filterResults #dietaryFilterCat #veganFilter.active {
+  background-color: var(--vegan);
+}
 main #resultsContent #resultsHeader #filterResults #dietaryFilterCat #veganFilter.active h3 {
   color: white;
 }
@@ -833,7 +881,7 @@ main#recipe #recipeIntro .recipeTitleContent .recipeTitleInfo {
           flex-direction: column;
   gap: 8px;
 }
-main#recipe #recipeIntro .recipeTitleContent .recipeTitleInfo div {
+main#recipe #recipeIntro .recipeTitleContent .recipeTitleInfo > div {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -842,7 +890,7 @@ main#recipe #recipeIntro .recipeTitleContent .recipeTitleInfo div {
   display: flex;
   gap: 32px;
 }
-main#recipe #recipeIntro .recipeTitleContent .recipeTitleInfo div .time {
+main#recipe #recipeIntro .recipeTitleContent .recipeTitleInfo > div .time {
   gap: 10px;
 }
 main#recipe #ingredients {
@@ -897,6 +945,9 @@ main#recipe #instructions .steps {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 36px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 @media (min-width: 1200px) {
   main#recipe #instructions .steps {
@@ -908,7 +959,7 @@ main#recipe #instructions .steps {
             flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    gap: 36px;
+    gap: 48px;
   }
 }
 main#recipe #instructions .steps .step {
@@ -1036,9 +1087,9 @@ p,
   line-height: normal;
   margin: 0;
 }
-p.cuisine,
-.headerButton.cuisine,
-.search.cuisine {
+p.tag,
+.headerButton.tag,
+.search.tag {
   font-size: 0.75rem;
   font-weight: 600;
 }
