@@ -77,20 +77,26 @@ $result = $statement->get_result();
                     <ul class="steps blankList">
                         <?php
                         $steps = explode('*', $row['stepTitle']);
-                        foreach ($steps as $step) :
+                        $stepImgs = explode('*', $row['stepImg']);
+                        $stepDescs = explode('*', $row['stepDesc']);
+                        foreach ($steps as $index => $step) :
                         ?>
                             <li>
                                 <div class="step">
                                     <div class="stepImg">
-                                        <img src="https://placehold.co/1102x734" alt="">
+                                        <img
+                                            src="assets/<?php echo htmlspecialchars($row['imgFolder']) . "/" . htmlspecialchars(urldecode($stepImgs[$index])); ?>"
+                                            alt="<?php echo htmlspecialchars($row['title']); ?>"
+                                            height="734"
+                                            width="1102">
                                     </div>
                                     <div class="stepInfo">
                                         <div class="stepNum">
-                                            <h5>#</h5>
+                                            <h5><?php echo $index + 1; ?></h5>
                                         </div>
                                         <div class="stepText">
                                             <h5><?php echo htmlspecialchars(urldecode($step)); ?></h5>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus orci facilisis id.</p>
+                                            <p><?php echo htmlspecialchars(urldecode($stepDescs[$index])); ?></p>
                                         </div>
                                     </div>
                                 </div>
