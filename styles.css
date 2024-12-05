@@ -1099,6 +1099,10 @@ p.preview,
   font-size: 0.75rem;
 }
 
+.headerButton:hover p {
+  font-weight: 600;
+}
+
 h1 {
   margin: 0;
   font-size: 2.25rem;
@@ -1228,7 +1232,7 @@ h5 {
 
 .headerButton .buttonState:hover,
 #filterButton:not(.disabled, .active) .buttonState:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .headerButton .buttonState:active, #filterButton:not(.disabled, .active) .buttonState:active {
