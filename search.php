@@ -84,6 +84,13 @@ $recipes = $statement->get_result()->fetch_all(MYSQLI_ASSOC);
                 </div>
             </div>
             <?php if (count($recipes) >= 1) : ?>
+                <div id=resultsCount>
+                    <?php if (count($recipes) == 1): ?>
+                        <h4>1 recipe found</h4>
+                    <?php else: ?>
+                    <h4><?php echo count($recipes) . " recipes found"; ?></h4>
+                    <?php endif; ?>
+                </div>
                 <div class="results noLink">
                     <?php foreach ($recipes as $recipe) : ?>
                         <div class="recipeCard">

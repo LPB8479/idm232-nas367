@@ -283,6 +283,12 @@ main {
             }
         }
         
+        #resultsCount{
+            background-color: white;
+            padding: 20px 48px 0px;
+            // width: 100%;
+            align-self: stretch;
+        }
 
         .results {
             align-content: center;

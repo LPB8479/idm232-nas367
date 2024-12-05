@@ -704,6 +704,13 @@ main #resultsContent #resultsHeader #filterResults #dietaryFilterCat #veganFilte
 main #resultsContent #resultsHeader #filterResults #dietaryFilterCat #veganFilter.active h3 {
   color: white;
 }
+main #resultsContent #resultsCount {
+  background-color: white;
+  padding: 20px 48px 0px;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+}
 main #resultsContent .results {
   -ms-flex-line-pack: center;
       align-content: center;
