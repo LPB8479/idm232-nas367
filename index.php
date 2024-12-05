@@ -10,7 +10,7 @@ $featured = $statement->get_result()->fetch_all(MYSQLI_ASSOC);
     <?php include 'dev/global/header.php'; ?>
     <main>
         <section id="hero">
-            <img src="https://placehold.co/1344x756" alt="">
+            <img src="assets/hero.png" alt="">
         </section>
         <section id="featuredRecipes">
             <h1>Featured Recipes</h1>
