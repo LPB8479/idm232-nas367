@@ -45,9 +45,6 @@ $recipes = $statement->get_result()->fetch_all(MYSQLI_ASSOC);
                         <div id="seafoodFilter" class="cuisineFilter searchFilter">
                             <h4>Seafood</h4>
                         </div>
-                        <div id="chineseFilter" class="cuisineFilter searchFilter">
-                            <h4>Chinese</h4>
-                        </div>
                         <div id="asianFilter" class="cuisineFilter searchFilter">
                             <h4>Asian</h4>
                         </div>
@@ -62,12 +59,6 @@ $recipes = $statement->get_result()->fetch_all(MYSQLI_ASSOC);
                         </div>
                         <div id="seasonalFilter" class="cuisineFilter searchFilter">
                             <h4>Seasonal</h4>
-                        </div>
-                        <div id="koreanFilter" class="cuisineFilter searchFilter">
-                            <h4>Korean</h4>
-                        </div>
-                        <div id="thaiFilter" class="cuisineFilter searchFilter">
-                            <h4>Thai</h4>
                         </div>
                     </div>
                     <div id="dietaryFilterCat">
