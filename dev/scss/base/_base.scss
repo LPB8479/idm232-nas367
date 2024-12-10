@@ -303,6 +303,9 @@ main {
 
             .recipeCard {
                 flex-direction: column;
+                &.filteredDiet, &.filteredCuisine{
+                    display: none;
+                }
 
                 .cardImg {
                     padding: 0 39px;

@@ -738,6 +738,9 @@ main #resultsContent .results .recipeCard {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+main #resultsContent .results .recipeCard.filteredDiet, main #resultsContent .results .recipeCard.filteredCuisine {
+  display: none;
+}
 main #resultsContent .results .recipeCard .cardImg {
   padding: 0 39px;
 }

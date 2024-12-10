@@ -11,6 +11,27 @@ function hamburger() {
 }
 hamburger();
 
+const filters = document.querySelectorAll(".searchFilter");
+const filterButton = document.getElementById("filterButton");
+const recipeCards = document.querySelectorAll(".recipeCard");
+
+//start with filter menu collapsed
+document.getElementById("filterResults").style.display = "none"
+
+function collapseFilters() {
+    if (!filterButton.classList.contains("open")) {
+        $('#filterResults').slideDown(500);
+        filterButton.style.backgroundColor = "var(--orange)";
+        filterButton.style.borderColor = 'var(--orange)';
+        filterButton.classList.add("open");
+    } else {
+        $('#filterResults').slideUp(500);
+        filterButton.style.backgroundColor = "var(--yellow)";
+        filterButton.style.borderColor = 'black';
+        filterButton.classList.remove("open");
+    }
+}
+
 function toggleFilterButton(selected) {
     selected.classList.toggle("active")
     //ensure only 1 filter per type is active at once
@@ -32,61 +53,47 @@ function toggleFilterButton(selected) {
     }
 }
 
-function resetFilter() {
-    const recipeCards = document.querySelectorAll(".recipeCard");
-    const recipeCount = document.querySelector("#resultsCount h4 span");
+function applyFilters() {
+    //reset all filters
     recipeCards.forEach((card) => {
-        card.style.display = "";
+        card.classList.remove("filteredCuisine", "filteredDiet");
+    });
+
+    //apply active filters
+    filters.forEach((filter) => {     
+        const filterType = (filter.classList.contains("cuisineFilter")) ? "Cuisine" : "Diet";
+        const filterName = filter.id.replace("Filter", "");
+        if (filter.classList.contains("active")) {
+            recipeCards.forEach((card) => {
+                if (!(card.classList.contains(filterName))) {
+                    card.classList.add(`filtered${filterType}`);
+                }
+            });
+        }
     })
-    recipeCount.innerHTML = recipeCards.length.toString()
+}
+
+function updateResultsCount() {
+    let newCount = 0;
+    recipeCards.forEach((card) => {
+        if (!(card.classList.contains("filteredDiet")) && !(card.classList.contains("filteredCuisine"))) {
+            newCount++;
+        }
+    })
+    document.querySelector("#resultsCount h4 span").innerHTML = newCount.toString();
 }
 
 function filterMenu() {
-    //collapse filter menu
-    const filterButton = document.getElementById("filterButton");
     if (filterButton) {
-        // document.getElementById('filterResults').style.display = "none"
-        filterButton.addEventListener("click", () => {
-            if (!filterButton.classList.contains("open")) {
-                $('#filterResults').slideDown(500);
-                filterButton.style.backgroundColor = "var(--orange)";
-                filterButton.style.borderColor = 'var(--orange)';
-                filterButton.classList.add("open");
-            } else {
-                $('#filterResults').slideUp(500);
-                filterButton.style.backgroundColor = "var(--yellow)";
-                filterButton.style.borderColor = 'black';
-                filterButton.classList.remove("open");
-            }
-        });
+        //collapse filter menu
+        filterButton.addEventListener("click", collapseFilters, false);
 
         //filter buttons functionality
-        const filters = document.querySelectorAll(".searchFilter");
         filters.forEach((selectedFilterButton) => {
             selectedFilterButton.addEventListener("click", () => {
                 toggleFilterButton(selectedFilterButton);
-                const recipeCards = document.querySelectorAll(".recipeCard");
-                const recipeCount = document.querySelector("#resultsCount h4 span");
-                if (selectedFilterButton.classList.contains("active")) {
-                    const filterName = selectedFilterButton.id.replace("Filter", "");
-                    let newCount = 0;
-                    recipeCards.forEach((card) => {
-                        if (!(card.classList.contains(filterName))) {
-                            card.style.display = 'none';
-                            newCount++;
-                        }
-                    })
-                    recipeCount.innerHTML = (parseInt(recipeCount.innerHTML) - newCount).toString();
-                }
-                else {
-                    resetFilter();
-                }
-                /*
-                    No need to have files talk to each other
-                    make sure each recipe has the tags as classes
-                    use js to d:n or hidden:true elements that don't match
-                        update results count (or remove entirely)
-                */
+                applyFilters();
+                updateResultsCount();
             })
         })
     }
