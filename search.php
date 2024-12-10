@@ -18,7 +18,7 @@ $recipes = $statement->get_result()->fetch_all(MYSQLI_ASSOC);
         <section id="resultsContent">
             <div id="resultsHeader">
                 <h1>Search Results</h1>
-                <div class="searchFilter">
+                <div class="searchAndFilter">
                     <div class="search">
                         <i class="fa-solid fa-magnifying-glass"></i>
                         <form action="search.php" method="get">
@@ -71,7 +71,7 @@ $recipes = $statement->get_result()->fetch_all(MYSQLI_ASSOC);
                         </div>
                     </div>
                     <div id="dietaryFilterCat">
-                        <div class="dietaryFilter searchFilter" id="pescFilter">
+                        <div class="dietaryFilter searchFilter" id="pescatarianFilter">
                             <h3>P</h3>
                         </div>
                         <div class="dietaryFilter searchFilter" id="vegetarianFilter">
@@ -86,14 +86,20 @@ $recipes = $statement->get_result()->fetch_all(MYSQLI_ASSOC);
             <?php if (count($recipes) >= 1) : ?>
                 <div id=resultsCount>
                     <?php if (count($recipes) == 1): ?>
-                        <h4>1 recipe found</h4>
+                         <h4>
+                            <span>1</span>
+                             recipe found
+                         </h4>
                     <?php else: ?>
-                    <h4><?php echo count($recipes) . " recipes found"; ?></h4>
+                     <h4>
+                        <span><?php echo count($recipes); ?></span>
+                         recipes found
+                     </h4>
                     <?php endif; ?>
                 </div>
                 <div class="results noLink">
                     <?php foreach ($recipes as $recipe) : ?>
-                        <div class="recipeCard">
+                        <div class="recipeCard <?php echo htmlspecialchars(strtolower($recipe['cuisine'])) . " " . htmlspecialchars(strtolower($recipe['dietaryPref'])) ?>">
                             <a class="cardImg" href="recipe.php?id=<?php echo htmlspecialchars($recipe['id']); ?>">
                                 <img
                                     src="assets/<?php echo htmlspecialchars($recipe['imgFolder']) . "/" . htmlspecialchars($recipe['titleImg']); ?>"
@@ -107,12 +113,12 @@ $recipes = $statement->get_result()->fetch_all(MYSQLI_ASSOC);
                                     <p><?php echo htmlspecialchars(urldecode($recipe['subtitle'])); ?></p>
                                 </a>
                                 <div class="tags">
-                                    <a href="" class="cuisineTag <?php echo htmlspecialchars(strtolower($recipe['cuisine'])) ?>">
-                                        <p class="tag"><?php echo htmlspecialchars($recipe['cuisine']) ?></p>
-                                    </a>
-                                    <a href="" class="dietaryTag <?php echo htmlspecialchars(strtolower($recipe['dietaryPref'])) ?>">
-                                        <p class="tag"><?php echo htmlspecialchars($recipe['dietaryPref']) ?></p>
-                                    </a>
+                                    <div class="tag cuisineTag <?php echo htmlspecialchars(strtolower($recipe['cuisine'])) ?>">
+                                        <p class="tagText"><?php echo htmlspecialchars($recipe['cuisine']) ?></p>
+                                    </div>
+                                    <div class="tag dietaryTag <?php echo htmlspecialchars(strtolower($recipe['dietaryPref'])) ?>">
+                                        <p class="tagText"><?php echo htmlspecialchars($recipe['dietaryPref']) ?></p>
+                                    </div>
                                 </div>
                                 <div class="time">
                                     <i class="fa-solid fa-clock"></i>

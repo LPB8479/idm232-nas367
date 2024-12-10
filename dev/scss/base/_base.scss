@@ -11,7 +11,7 @@ ul.blankList {
     padding: 0;
 }
 
-.searchFilter {
+.searchAndFilter {
     align-items: center;
     display: flex;
     gap: 10px;
@@ -35,7 +35,7 @@ ul.blankList {
 .tags{
     display: flex;
     gap: 10px;
-    a{
+    div{
         display: flex;
         align-items: center;
         border-radius: 14.5px;
@@ -230,7 +230,7 @@ main {
                         padding: 7.5px 17px;
                     }
     
-                    #pescFilter {
+                    #pescatarianFilter {
                         border: 3px solid var(--pesc);
     
                         h3 {

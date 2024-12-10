@@ -339,7 +339,7 @@ ul.blankList {
   padding: 0;
 }
 
-.searchFilter {
+.searchAndFilter {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -373,7 +373,7 @@ ul.blankList {
   display: flex;
   gap: 10px;
 }
-.tags a {
+.tags div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -665,17 +665,17 @@ main #resultsContent #resultsHeader #filterResults #dietaryFilterCat {
 main #resultsContent #resultsHeader #filterResults #dietaryFilterCat .dietaryFilter {
   padding: 7.5px 17px;
 }
-main #resultsContent #resultsHeader #filterResults #dietaryFilterCat #pescFilter {
+main #resultsContent #resultsHeader #filterResults #dietaryFilterCat #pescatarianFilter {
   border: 3px solid var(--pesc);
 }
-main #resultsContent #resultsHeader #filterResults #dietaryFilterCat #pescFilter h3 {
+main #resultsContent #resultsHeader #filterResults #dietaryFilterCat #pescatarianFilter h3 {
   color: #947729;
   font-weight: 700;
 }
-main #resultsContent #resultsHeader #filterResults #dietaryFilterCat #pescFilter.active {
+main #resultsContent #resultsHeader #filterResults #dietaryFilterCat #pescatarianFilter.active {
   background-color: var(--pesc);
 }
-main #resultsContent #resultsHeader #filterResults #dietaryFilterCat #pescFilter.active h3 {
+main #resultsContent #resultsHeader #filterResults #dietaryFilterCat #pescatarianFilter.active h3 {
   color: white;
 }
 main #resultsContent #resultsHeader #filterResults #dietaryFilterCat #vegetarianFilter {
@@ -1094,9 +1094,9 @@ p,
   line-height: normal;
   margin: 0;
 }
-p.tag,
-.headerButton.tag,
-.search.tag {
+p.tagText,
+.headerButton.tagText,
+.search.tagText {
   font-size: 0.75rem;
   font-weight: 600;
 }
@@ -1179,6 +1179,11 @@ h5 {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 20px 30px;
+}
+.headerButton .buttonState p {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 #filterButton {
@@ -1275,9 +1280,6 @@ input[type=text] {
   width: 100%;
 }
 
-/* =============
-    Navigation
-============= */
 /* =============
     Search
 ============= */
