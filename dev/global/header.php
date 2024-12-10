@@ -18,7 +18,7 @@
         <ul class="noLink blankList headerNav">
             <li class="headerButton">
                 <a href="search.php?query=" class="buttonState">
-                    <p>DISHES</p>
+                    <p>ALL DISHES</p>
                 </a>
             </li>
             <li class="headerButton">
@@ -26,16 +26,16 @@
                     <p>CATEGORIES</p>
                 </a>
             </li>
-            <li class="headerButton">
+            <!-- <li class="headerButton">
                 <a href="" class="buttonState">
                     <p>PLANS</p>
                 </a>
-            </li>
-            <li class="headerButton">
+            </li> -->
+            <!-- <li class="headerButton">
                 <a href="" class="buttonState">
                     <p>TIPS</p>
                 </a>
-            </li>
+            </li> -->
             <li class="headerButton">
                 <a href="help.php" class="buttonState">
                     <p>HELP</p>
@@ -50,12 +50,12 @@
                 <input type="text" name="query" placeholder="Search">
             </form>
         </div>
-        <ul class="noLink blankList headerNav">
+        <!-- <ul class="noLink blankList headerNav">
             <li class="headerButton">
                 <a href="" class="buttonState">
                     <p>MY ACCOUNT</p>
                 </a>
             </li>
-        </ul>
+        </ul> -->
     </div>
 </header>

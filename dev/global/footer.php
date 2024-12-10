@@ -8,7 +8,7 @@
             <ul class="noLink blankList ">
                 <li>
                     <a href="recipe.php">
-                        <p>Dishes</p>
+                        <p>All Dishes</p>
                     </a>
                 </li>
                 <li>
@@ -16,7 +16,7 @@
                         <p>Categories</p>
                     </a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="">
                         <p>Plans</p>
                     </a>
@@ -60,7 +60,7 @@
                     <a href="">
                         <p>Privacy Policy</p>
                     </a>
-                </li>
+                </li> -->
                 <li>
                     <a href="help.php">
                         <p>Help</p>
