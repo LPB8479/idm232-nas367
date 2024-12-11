@@ -458,6 +458,12 @@ main section {
   padding-left: 24px;
   padding-right: 24px;
 }
+@media (min-width: 1024px) {
+  main section {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+}
 @media (min-width: 1200px) {
   main section {
     padding-left: 48px;
@@ -828,16 +834,10 @@ main#recipe img {
      object-fit: cover;
   width: 100%;
 }
-@media (min-width: 1200px) {
-  main#recipe {
-    padding-left: 182px;
-    padding-right: 182px;
-  }
-}
 main#recipe section {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-item-align: stretch;
       -ms-grid-row-align: stretch;
       align-self: stretch;
@@ -848,6 +848,18 @@ main#recipe section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+@media (min-width: 1024px) {
+  main#recipe section {
+    padding-left: 86px;
+    padding-right: 86px;
+  }
+}
+@media (min-width: 1200px) {
+  main#recipe section {
+    padding-left: 182px;
+    padding-right: 182px;
+  }
 }
 main#recipe #recipeIntro {
   gap: 24px;
@@ -943,9 +955,9 @@ main#recipe #instructions {
   gap: 16px;
 }
 main#recipe #instructions .steps {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-item-align: stretch;
       -ms-grid-row-align: stretch;
       align-self: stretch;
@@ -963,6 +975,9 @@ main#recipe #instructions .steps {
 }
 @media (min-width: 1200px) {
   main#recipe #instructions .steps {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     -ms-flex-line-pack: start;
         align-content: flex-start;
     -webkit-box-orient: horizontal;
@@ -1352,7 +1367,7 @@ header #headerLeft {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 40px;
+  gap: 20px 40px;
 }
 @media (min-width: 1200px) {
   header #headerLeft {
@@ -1373,7 +1388,9 @@ header #headerLeft #mobileDoubleHeader {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  height: 120px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-height: 120px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1383,9 +1400,26 @@ header #headerLeft #mobileDoubleHeader .headerLogo {
   width: 120px;
 }
 header #headerLeft #mobileDoubleHeader .mobileSearch {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
   width: 100%;
 }
-header #headerLeft #mobileDoubleHeader .fa-bars {
+@media (min-width: 768px) {
+  header #headerLeft #mobileDoubleHeader .mobileSearch {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+@media (min-width: 576px) {
+  header #headerLeft #mobileDoubleHeader #hamburger {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+}
+header #headerLeft #mobileDoubleHeader #hamburger .fa-bars {
   font-size: 3rem;
   height: 100%;
   padding: 8px;

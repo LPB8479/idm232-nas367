@@ -15,7 +15,7 @@ header {
         align-items: center;
         display: flex;
         flex-direction: column;
-        gap: 40px;
+        gap: 20px 40px;
 
         @include xl {
             flex-direction: row;
@@ -25,7 +25,8 @@ header {
             align-items: center;
             display: flex;
             flex-direction: row;
-            height: 120px;
+            flex-wrap: wrap;
+            min-height: 120px;
             justify-content: space-between;
             width: 100%;
 
@@ -34,13 +35,24 @@ header {
             }
 
             .mobileSearch {
+                order: 3;
                 width: 100%;
+
+                @include md {
+                    order: 2;
+                }
             }
 
-            .fa-bars {
-                font-size: 3rem;
-                height: 100%;
-                padding: 8px;
+            #hamburger {
+                @include sm {
+                    order: 3;
+                }
+                .fa-bars {
+                    font-size: 3rem;
+                    height: 100%;
+                    padding: 8px;
+
+                }
             }
         }
 
