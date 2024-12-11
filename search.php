@@ -42,9 +42,6 @@ $recipes = $statement->get_result()->fetch_all(MYSQLI_ASSOC);
                         <div id="italianFilter" class="cuisineFilter searchFilter">
                             <h4>Italian</h4>
                         </div>
-                        <div id="seafoodFilter" class="cuisineFilter searchFilter">
-                            <h4>Seafood</h4>
-                        </div>
                         <div id="asianFilter" class="cuisineFilter searchFilter">
                             <h4>Asian</h4>
                         </div>
