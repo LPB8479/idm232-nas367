@@ -113,9 +113,6 @@ $result = $statement->get_result();
         <main id="recipe">
             <div id="recipeError">
                 <h2>Recipe Not Found</h2>
-                <!-- <div id="errorImg">
-                    <img src="assets/errorImage.png" alt="error image">
-                </div> -->
             </div>
         </main>
     <?php

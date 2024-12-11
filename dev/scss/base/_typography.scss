@@ -6,8 +6,7 @@ body {
 }
 
 p,
-.headerButton,
-.search {
+.headerButton, .search {
     //16px
     font-size: 1rem;
     font-style: normal;
@@ -28,16 +27,16 @@ p,
 }
 
 .headerButton:hover {
-    p{
+    p {
         font-weight: 600;
     }
 }
 
 h1 {
     //36px
-    margin: 0;
     font-size: 2.25rem;
     font-weight: 700;
+    margin: 0;
 }
 
 h2 {
@@ -48,9 +47,9 @@ h2 {
 
 h3 {
     //24px
-    margin: 0;
     font-size: 1.5rem;
     font-weight: 500;
+    margin: 0;
 
     &.preview {
         //14px
@@ -60,16 +59,16 @@ h3 {
 
 h4 {
     //20px
-    margin: 0;
     font-size: 1.25rem;
     font-weight: 600;
+    margin: 0;
 }
 
 h5 {
     //18px
-    margin: 0;
     font-size: 1.125rem;
     font-weight: 700;
+    margin: 0;
 }
 
 .noLink a {

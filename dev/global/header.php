@@ -40,12 +40,5 @@
                 <input type="text" name="query" placeholder="Search">
             </form>
         </div>
-        <!-- <ul class="noLink blankList headerNav">
-            <li class="headerButton">
-                <a href="" class="buttonState">
-                    <p>MY ACCOUNT</p>
-                </a>
-            </li>
-        </ul> -->
     </div>
 </header>

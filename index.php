@@ -8,7 +8,7 @@ $featured = $statement->get_result()->fetch_all(MYSQLI_ASSOC);
 
 <body>
     <?php include 'dev/global/header.php'; ?>
-    <main>
+    <main id="homepage">
         <section id="hero">
             <img src="assets/hero.png" alt="">
         </section>

@@ -16,51 +16,6 @@
                         <p>Categories</p>
                     </a>
                 </li>
-                <!-- <li>
-                    <a href="">
-                        <p>Plans</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <p>Tips</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <p>Gift</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <p>Blog</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <p>About</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <p>Our Team</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <p>Careers</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <p>Terms and Conditions</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <p>Privacy Policy</p>
-                    </a>
-                </li> -->
                 <li>
                     <a href="help.php">
                         <p>Help</p>

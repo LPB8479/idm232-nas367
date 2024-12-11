@@ -14,7 +14,7 @@ $recipes = $statement->get_result()->fetch_all(MYSQLI_ASSOC);
 
 <body>
     <?php include 'dev/global/header.php'; ?>
-    <main>
+    <main id="search">
         <section id="resultsContent">
             <div id="resultsHeader">
                 <h1>Search Results</h1>
