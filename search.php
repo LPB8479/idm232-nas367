@@ -77,15 +77,15 @@ $recipes = $statement->get_result()->fetch_all(MYSQLI_ASSOC);
             <?php if (count($recipes) >= 1) : ?>
                 <div id=resultsCount>
                     <?php if (count($recipes) == 1): ?>
-                         <h4>
+                        <h4>
                             <span>1</span>
-                             recipe found
-                         </h4>
+                            recipe found
+                        </h4>
                     <?php else: ?>
-                     <h4>
-                        <span><?php echo count($recipes); ?></span>
-                         recipes found
-                     </h4>
+                        <h4>
+                            <span><?php echo count($recipes); ?></span>
+                            recipes found
+                        </h4>
                     <?php endif; ?>
                 </div>
                 <div class="results noLink">
@@ -104,12 +104,12 @@ $recipes = $statement->get_result()->fetch_all(MYSQLI_ASSOC);
                                     <p><?php echo htmlspecialchars(urldecode($recipe['subtitle'])); ?></p>
                                 </a>
                                 <div class="tags">
-                                    <div class="tag cuisineTag <?php echo htmlspecialchars(strtolower($recipe['cuisine'])) ?>">
+                                    <a class="tag cuisineTag <?php echo htmlspecialchars(strtolower($recipe['cuisine'])) ?>" href="search.php?cuisine=<?php echo htmlspecialchars(strtolower($recipe['cuisine'])) ?>">
                                         <p class="tagText"><?php echo htmlspecialchars($recipe['cuisine']) ?></p>
-                                    </div>
-                                    <div class="tag dietaryTag <?php echo htmlspecialchars(strtolower($recipe['dietaryPref'])) ?>">
+                                    </a>
+                                    <a class="tag dietaryTag <?php echo htmlspecialchars(strtolower($recipe['dietaryPref'])) ?>" href="search.php?dietary=<?php echo htmlspecialchars(strtolower($recipe['dietaryPref'])) ?>">
                                         <p class="tagText"><?php echo htmlspecialchars($recipe['dietaryPref']) ?></p>
-                                    </div>
+                                    </a>
                                 </div>
                                 <div class="time">
                                     <i class="fa-solid fa-clock"></i>

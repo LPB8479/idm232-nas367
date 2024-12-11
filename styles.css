@@ -373,7 +373,7 @@ ul.blankList {
   display: flex;
   gap: 10px;
 }
-.tags div {
+.tags a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

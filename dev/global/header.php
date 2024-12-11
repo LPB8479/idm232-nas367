@@ -22,7 +22,7 @@
                 </a>
             </li>
             <li class="headerButton">
-                <a href="" class="buttonState">
+                <a href="categories.php" class="buttonState">
                     <p>CATEGORIES</p>
                 </a>
             </li>

@@ -53,6 +53,16 @@ function toggleFilterButton(selected) {
     }
 }
 
+function updateResultsCount() {
+    let newCount = 0;
+    recipeCards.forEach((card) => {
+        if (!(card.classList.contains("filteredDiet")) && !(card.classList.contains("filteredCuisine"))) {
+            newCount++;
+        }
+    })
+    document.querySelector("#resultsCount h4 span").innerHTML = newCount.toString();
+}
+
 function applyFilters() {
     //reset all filters
     recipeCards.forEach((card) => {
@@ -71,16 +81,7 @@ function applyFilters() {
             });
         }
     })
-}
-
-function updateResultsCount() {
-    let newCount = 0;
-    recipeCards.forEach((card) => {
-        if (!(card.classList.contains("filteredDiet")) && !(card.classList.contains("filteredCuisine"))) {
-            newCount++;
-        }
-    })
-    document.querySelector("#resultsCount h4 span").innerHTML = newCount.toString();
+    updateResultsCount();
 }
 
 function filterMenu() {
@@ -93,7 +94,6 @@ function filterMenu() {
             selectedFilterButton.addEventListener("click", () => {
                 toggleFilterButton(selectedFilterButton);
                 applyFilters();
-                updateResultsCount();
             })
         })
     }
@@ -105,4 +105,31 @@ const recipeError = document.getElementById("recipeError");
 const resultsHeaderHeight = (document.getElementById("resultsHeader")) ? Math.ceil(document.getElementById("resultsHeader").offsetHeight) : 0;
 if (recipeError) {
     recipeError.style.height = (window.innerHeight - document.querySelector("header").offsetHeight - resultsHeaderHeight - document.querySelector("footer").offsetHeight - 40) + 'px';
+}
+
+// URL FILTERS
+// I added this as an "extra" thing to make some other elements work the way I intended. It might have been better to do this with PHP but I wanted to keep things as simple as I could and work with the filter functionality I already had
+const validCuisineFilters = ['mexican', 'french', 'italian', 'seafood', 'asian', 'middle-eastern', 'american', 'mediterranean', 'seasonal'];
+const validDietaryFilters = ['pescatarian', 'vegetarian', 'vegan'];
+
+if (window.location.pathname.includes("search")) {
+    const urlParams = new URLSearchParams(window.location.search);
+    const cuisineQuery = urlParams.get('cuisine');
+    const dietaryQuery = urlParams.get('dietary');
+    if (urlParams.has('cuisine')){
+        console.log(cuisineQuery)
+        if (validCuisineFilters.includes(cuisineQuery)) {
+            const filter = document.getElementById(`${cuisineQuery}Filter`);
+            toggleFilterButton(filter);
+            applyFilters();
+        }
+    }
+    if (urlParams.has('dietary')){
+        console.log(dietaryQuery)
+        if (validDietaryFilters.includes(dietaryQuery)) {
+            const filter = document.getElementById(`${dietaryQuery}Filter`);
+            toggleFilterButton(filter);
+            applyFilters();
+        }
+    }
 }
