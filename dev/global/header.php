@@ -23,19 +23,9 @@
             </li>
             <li class="headerButton">
                 <a href="" class="buttonState">
-                    <p>CATEGORIES</p>
+                    <p>CUISINES</p>
                 </a>
             </li>
-            <!-- <li class="headerButton">
-                <a href="" class="buttonState">
-                    <p>PLANS</p>
-                </a>
-            </li> -->
-            <!-- <li class="headerButton">
-                <a href="" class="buttonState">
-                    <p>TIPS</p>
-                </a>
-            </li> -->
             <li class="headerButton">
                 <a href="help.php" class="buttonState">
                     <p>HELP</p>
