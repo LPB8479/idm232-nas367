@@ -310,6 +310,7 @@ main {
 
             .recipeCard {
                 flex-direction: column;
+                max-width: 252px;
 
                 &.filteredDiet,
                 &.filteredCuisine {
@@ -524,14 +525,24 @@ main {
         }
     }
 
-    #help {
-        background-color: white;
+    &#help {
         display: flex;
+        background-color: white;
+        width: 100%;
         flex-direction: column;
-        gap: 16px;
-        padding-bottom: 20px;
-        padding-top: 20px;
-
+        section {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            padding-bottom: 20px;
+            padding-top: 20px;
+            h4{
+                font-weight: 400 !important;
+            }
+        }
+        img{
+            width:100%;
+        }
     }
 
     #recipeError {
@@ -552,14 +563,5 @@ main {
         h2 {
             text-align: center;
         }
-
-        // #errorImg {
-        //     height: 100%;
-        //     img {
-        //         height: 100%;
-        //         object-fit: cover;
-        //         width: 100%;
-        //     }
-        // }
     }
 }

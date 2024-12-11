@@ -737,6 +737,7 @@ main #resultsContent .results .recipeCard {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  max-width: 252px;
 }
 main #resultsContent .results .recipeCard.filteredDiet, main #resultsContent .results .recipeCard.filteredCuisine {
   display: none;
@@ -1037,8 +1038,18 @@ main#recipe #instructions .steps .step .stepInfo .stepText {
           align-items: flex-start;
   gap: 8px;
 }
-main #help {
+main#help {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background-color: white;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+main#help section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1049,6 +1060,12 @@ main #help {
   gap: 16px;
   padding-bottom: 20px;
   padding-top: 20px;
+}
+main#help section h4 {
+  font-weight: 400 !important;
+}
+main#help img {
+  width: 100%;
 }
 main #recipeError {
   -ms-flex-line-pack: center !important;
