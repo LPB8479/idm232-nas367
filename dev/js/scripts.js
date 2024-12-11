@@ -109,15 +109,16 @@ if (recipeError) {
 
 // URL FILTERS
 // I added this as an "extra" thing to make some other elements work the way I intended. It might have been better to do this with PHP but I wanted to keep things as simple as I could and work with the filter functionality I already had
-const validCuisineFilters = ['mexican', 'french', 'italian', 'seafood', 'asian', 'middle-eastern', 'american', 'mediterranean', 'seasonal'];
+const validCuisineFilters = ['mexican', 'french', 'italian', 'seafood', 'asian', 'middle-eastern', 'middleeastern', 'american', 'mediterranean', 'seasonal'];
 const validDietaryFilters = ['pescatarian', 'vegetarian', 'vegan'];
 
 if (window.location.pathname.includes("search")) {
-    const urlParams = new URLSearchParams(window.location.search);
+    const queryString = window.location.search.toLowerCase().replace("middleeastern", "middle-eastern")
+    const urlParams = new URLSearchParams(queryString);
     const cuisineQuery = urlParams.get('cuisine');
     const dietaryQuery = urlParams.get('dietary');
     if (urlParams.has('cuisine')){
-        console.log(cuisineQuery)
+        console.log(queryString)
         if (validCuisineFilters.includes(cuisineQuery)) {
             const filter = document.getElementById(`${cuisineQuery}Filter`);
             toggleFilterButton(filter);
