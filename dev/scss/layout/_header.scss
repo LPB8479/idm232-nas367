@@ -38,7 +38,7 @@ header {
                 order: 3;
                 width: 100%;
 
-                @include md {
+                @include sm {
                     order: 2;
                 }
             }
