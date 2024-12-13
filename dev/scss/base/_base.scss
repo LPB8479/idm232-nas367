@@ -117,11 +117,13 @@ main {
             align-items: center;
             display: flex;
             justify-content: center;
-                img, source {
-                    width: 100%;
-                    max-width: 1400px;
-                    display: block;
-                }
+
+            img,
+            source {
+                width: 100%;
+                max-width: 1400px;
+                display: block;
+            }
         }
 
         #featuredRecipes {
@@ -345,7 +347,7 @@ main {
                     flex-wrap: wrap;
                     justify-content: space-between;
                     padding: 20px 120px;
-                    
+
                     .recipeCard {
                         flex-direction: row;
                         max-width: calc((100% - 120px)/2);
@@ -402,11 +404,11 @@ main {
             display: flex;
             flex-direction: column;
 
-            @include lg{
+            @include lg {
                 padding-left: 86px;
                 padding-right: 86px;
             }
-    
+
             @include xl {
                 padding-left: 182px;
                 padding-right: 182px;
@@ -580,6 +582,21 @@ main {
 
         h2 {
             text-align: center;
+        }
+    }
+
+    &#caseStudy {
+        background-color: white;
+        height: calc(100vh - 112px);
+        margin: 32px;
+        padding: 24px;
+        width: calc(100vw - 112px);
+        section{
+            padding: 0;
+        }
+
+        h1 {
+            margin-bottom: 8px;
         }
     }
 }
