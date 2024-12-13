@@ -60,13 +60,13 @@ $recipes = $statement->get_result()->fetch_all(MYSQLI_ASSOC);
                     </div>
                     <div id="dietaryFilterCat">
                         <div class="dietaryFilter searchFilter" id="pescatarianFilter">
-                            <h3>P</h3>
+                            <h3>Pescatarian</h3>
                         </div>
                         <div class="dietaryFilter searchFilter" id="vegetarianFilter">
-                            <h3>V</h3>
+                            <h3>Vegetarian</h3>
                         </div>
                         <div class="dietaryFilter searchFilter" id="veganFilter">
-                            <h3>Vg</h3>
+                            <h3>Vegan</h3>
                         </div>
                     </div>
                 </div>

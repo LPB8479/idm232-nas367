@@ -8,17 +8,17 @@
             <ul class="noLink blankList ">
                 <li>
                     <a href="search.php?query=">
-                        <p>All Dishes</p>
+                        <p>ALL DISHES</p>
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <p>Cuisines</p>
+                        <p>CUISINES</p>
                     </a>
                 </li>
                 <li>
                     <a href="help.php">
-                        <p>Help</p>
+                        <p>HELP</p>
                     </a>
                 </li>
             </ul>

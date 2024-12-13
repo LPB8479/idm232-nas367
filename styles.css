@@ -379,7 +379,8 @@ ul.blankList {
   width: fit-content;
 }
 .tags .cuisineTag {
-  background: #BFBFBF;
+  background: var(--orange);
+  color: white;
 }
 .tags .vegetarian {
   background: var(--vegetarian);
@@ -1132,6 +1133,19 @@ main#caseStudy h1 {
 }
 main#caseStudy h4 {
   margin-top: 16px;
+}
+main#caseStudy div {
+  margin-top: 8px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+}
+main#caseStudy div h1 {
+  font-weight: normal;
 }
 
 /* =============

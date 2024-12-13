@@ -39,7 +39,8 @@ ul.blankList {
     }
 
     .cuisineTag {
-        background: #BFBFBF;
+        background: var(--orange);
+        color: white;
     }
 
     .vegetarian {
@@ -483,7 +484,6 @@ main {
             gap: 16px;
 
             .steps {
-                // align-items: flex-start;
                 align-items: center;
                 align-self: stretch;
                 display: flex;
@@ -601,6 +601,15 @@ main {
         }
         h4 {
             margin-top: 16px;
+        }
+        div {
+            margin-top: 8px;
+            align-items: center;
+            display: flex;
+            gap: 16px;
+            h1{
+                font-weight: normal;
+            }
         }
     }
 }
