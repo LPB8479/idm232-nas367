@@ -565,6 +565,35 @@ main {
         }
     }
 
+    &#cuisines {
+        background-color: white;
+        padding-left: 24px;
+        padding-right: 24px;
+
+        @include lg {
+            padding-left: 36px;
+            padding-right: 36px;
+        }
+
+        @include xl {
+            padding-left: 48px;
+            padding-right: 48px;
+        }
+
+        ul {
+            display: flex;
+            gap: 56px;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            li {
+                padding: 40px 60px;
+                border: 1px solid #000;
+                font-size: 1.25rem;
+            }
+        }
+    }
+
     #recipeError {
         align-content: center !important;
         align-items: center !important;
@@ -591,7 +620,8 @@ main {
         margin-top: 0;
         padding: 24px;
         width: calc(100vw - 112px);
-        section{
+
+        section {
             padding: 0;
             margin-bottom: 24px;
         }
@@ -599,15 +629,18 @@ main {
         h1 {
             margin-bottom: 8px;
         }
+
         h4 {
             margin-top: 16px;
         }
+
         div {
             margin-top: 8px;
             align-items: center;
             display: flex;
             gap: 16px;
-            h1{
+
+            h1 {
                 font-weight: normal;
             }
         }

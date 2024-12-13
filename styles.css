@@ -1087,6 +1087,39 @@ main#help section h4 {
 main#help img {
   width: 100%;
 }
+main#cuisines {
+  background-color: white;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+@media (min-width: 1024px) {
+  main#cuisines {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+}
+@media (min-width: 1200px) {
+  main#cuisines {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+main#cuisines ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 56px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+main#cuisines ul li {
+  padding: 40px 60px;
+  border: 1px solid #000;
+  font-size: 1.25rem;
+}
 main #recipeError {
   -ms-flex-line-pack: center !important;
       align-content: center !important;

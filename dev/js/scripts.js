@@ -70,7 +70,7 @@ function applyFilters() {
     });
 
     //apply active filters
-    filters.forEach((filter) => {     
+    filters.forEach((filter) => {
         const filterType = (filter.classList.contains("cuisineFilter")) ? "Cuisine" : "Diet";
         const filterName = filter.id.replace("Filter", "");
         if (filter.classList.contains("active")) {
@@ -109,28 +109,31 @@ if (recipeError) {
 
 // URL FILTERS
 // I added this as an "extra" thing to make some other elements work the way I intended. It might have been better to do this with PHP but I wanted to keep things as simple as I could and work with the filter functionality I already had
-const validCuisineFilters = ['mexican', 'french', 'italian', 'asian', 'middle-eastern', 'middleeastern', 'american', 'mediterranean', 'seasonal'];
-const validDietaryFilters = ['pescatarian', 'vegetarian', 'vegan'];
+function urlFilters() {
+    const validCuisineFilters = ['mexican', 'french', 'italian', 'asian', 'middle-eastern', 'middleeastern', 'american', 'mediterranean', 'seasonal'];
+    const validDietaryFilters = ['pescatarian', 'vegetarian', 'vegan'];
 
-if (window.location.pathname.includes("search")) {
-    const queryString = window.location.search.toLowerCase().replace("middleeastern", "middle-eastern")
-    const urlParams = new URLSearchParams(queryString);
-    const cuisineQuery = urlParams.get('cuisine');
-    const dietaryQuery = urlParams.get('dietary');
-    if (urlParams.has('cuisine')){
-        console.log(queryString)
-        if (validCuisineFilters.includes(cuisineQuery)) {
-            const filter = document.getElementById(`${cuisineQuery}Filter`);
-            toggleFilterButton(filter);
-            applyFilters();
+    if (window.location.pathname.includes("search")) {
+        const queryString = window.location.search.toLowerCase().replace("middleeastern", "middle-eastern")
+        const urlParams = new URLSearchParams(queryString);
+        const cuisineQuery = urlParams.get('cuisine');
+        const dietaryQuery = urlParams.get('dietary');
+        if (urlParams.has('cuisine')) {
+            console.log(queryString)
+            if (validCuisineFilters.includes(cuisineQuery)) {
+                const filter = document.getElementById(`${cuisineQuery}Filter`);
+                toggleFilterButton(filter);
+                applyFilters();
+            }
         }
-    }
-    if (urlParams.has('dietary')){
-        console.log(dietaryQuery)
-        if (validDietaryFilters.includes(dietaryQuery)) {
-            const filter = document.getElementById(`${dietaryQuery}Filter`);
-            toggleFilterButton(filter);
-            applyFilters();
+        if (urlParams.has('dietary')) {
+            console.log(dietaryQuery)
+            if (validDietaryFilters.includes(dietaryQuery)) {
+                const filter = document.getElementById(`${dietaryQuery}Filter`);
+                toggleFilterButton(filter);
+                applyFilters();
+            }
         }
     }
 }
+urlFilters()
