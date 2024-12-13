@@ -481,7 +481,8 @@ main#homepage #hero {
       -ms-flex-pack: center;
           justify-content: center;
 }
-main#homepage #hero img, main#homepage #hero source {
+main#homepage #hero img,
+main#homepage #hero source {
   width: 100%;
   max-width: 1400px;
   display: block;
@@ -1114,6 +1115,23 @@ main #recipeError {
 }
 main #recipeError h2 {
   text-align: center;
+}
+main#caseStudy {
+  background-color: white;
+  margin: 32px;
+  margin-top: 0;
+  padding: 24px;
+  width: calc(100vw - 112px);
+}
+main#caseStudy section {
+  padding: 0;
+  margin-bottom: 24px;
+}
+main#caseStudy h1 {
+  margin-bottom: 8px;
+}
+main#caseStudy h4 {
+  margin-top: 16px;
 }
 
 /* =============

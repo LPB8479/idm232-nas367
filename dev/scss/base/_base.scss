@@ -587,16 +587,20 @@ main {
 
     &#caseStudy {
         background-color: white;
-        height: calc(100vh - 112px);
         margin: 32px;
+        margin-top: 0;
         padding: 24px;
         width: calc(100vw - 112px);
         section{
             padding: 0;
+            margin-bottom: 24px;
         }
 
         h1 {
             margin-bottom: 8px;
+        }
+        h4 {
+            margin-top: 16px;
         }
     }
 }
