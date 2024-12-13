@@ -5,9 +5,9 @@ function hamburger() {
         if (header.classList.contains("closed")) {
             header.classList.replace("closed", "open");
         } else {
-            header.classList.replace("open", "closed")
+            header.classList.replace("open", "closed");
         }
-    })
+    });
 }
 hamburger();
 
@@ -16,7 +16,7 @@ const filterButton = document.getElementById("filterButton");
 const recipeCards = document.querySelectorAll(".recipeCard");
 
 //start with filter menu collapsed
-document.getElementById("filterResults").style.display = "none"
+document.getElementById("filterResults").style.display = "none";
 
 function collapseFilters() {
     if (!filterButton.classList.contains("open")) {
@@ -33,7 +33,7 @@ function collapseFilters() {
 }
 
 function toggleFilterButton(selected) {
-    selected.classList.toggle("active")
+    selected.classList.toggle("active");
     //ensure only 1 filter per type is active at once
     if (selected.classList.contains("cuisineFilter")) {
         const cuisineFilters = document.querySelectorAll(".cuisineFilter");
@@ -41,7 +41,7 @@ function toggleFilterButton(selected) {
             if (filter != selected && filter.classList.contains("active")) {
                 filter.classList.remove("active");
             }
-        })
+        });
     }
     else {
         const dietaryFilter = document.querySelectorAll(".dietaryFilter");
@@ -49,7 +49,7 @@ function toggleFilterButton(selected) {
             if (filter != selected && filter.classList.contains("active")) {
                 filter.classList.remove("active");
             }
-        })
+        });
     }
 }
 
@@ -59,7 +59,7 @@ function updateResultsCount() {
         if (!(card.classList.contains("filteredDiet")) && !(card.classList.contains("filteredCuisine"))) {
             newCount++;
         }
-    })
+    });
     document.querySelector("#resultsCount h4 span").innerHTML = newCount.toString();
 }
 
@@ -80,7 +80,7 @@ function applyFilters() {
                 }
             });
         }
-    })
+    });
     updateResultsCount();
 }
 
@@ -94,8 +94,8 @@ function filterMenu() {
             selectedFilterButton.addEventListener("click", () => {
                 toggleFilterButton(selectedFilterButton);
                 applyFilters();
-            })
-        })
+            });
+        });
     }
 }
 filterMenu();
@@ -114,12 +114,11 @@ function urlFilters() {
     const validDietaryFilters = ['pescatarian', 'vegetarian', 'vegan'];
 
     if (window.location.pathname.includes("search")) {
-        const queryString = window.location.search.toLowerCase().replace("middleeastern", "middle-eastern")
+        const queryString = window.location.search.toLowerCase().replace("middleeastern", "middle-eastern");
         const urlParams = new URLSearchParams(queryString);
         const cuisineQuery = urlParams.get('cuisine');
         const dietaryQuery = urlParams.get('dietary');
         if (urlParams.has('cuisine')) {
-            console.log(queryString)
             if (validCuisineFilters.includes(cuisineQuery)) {
                 const filter = document.getElementById(`${cuisineQuery}Filter`);
                 toggleFilterButton(filter);
@@ -127,7 +126,6 @@ function urlFilters() {
             }
         }
         if (urlParams.has('dietary')) {
-            console.log(dietaryQuery)
             if (validDietaryFilters.includes(dietaryQuery)) {
                 const filter = document.getElementById(`${dietaryQuery}Filter`);
                 toggleFilterButton(filter);
@@ -136,4 +134,4 @@ function urlFilters() {
         }
     }
 }
-urlFilters()
+urlFilters();
