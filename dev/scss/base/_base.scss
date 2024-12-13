@@ -566,9 +566,10 @@ main {
     }
 
     &#cuisines {
+        align-items: center;
         background-color: white;
-        padding-left: 24px;
-        padding-right: 24px;
+        display: flex;
+        flex-direction: column;
 
         @include lg {
             padding-left: 36px;
@@ -580,17 +581,29 @@ main {
             padding-right: 48px;
         }
 
-        ul {
+        #cuisinesList {
             display: flex;
-            gap: 56px;
-            justify-content: center;
             flex-wrap: wrap;
+            gap: 56px;
+            max-width: 1400px;
+            justify-content: center;
+            padding: 24px;
 
             li {
-                padding: 40px 60px;
-                border: 1px solid #000;
-                font-size: 1.25rem;
+                border: 1px solid red;
+                padding: 40px 0;
+                
+                a {
+                    font-size: 1.25rem;
+                    padding: 40px 60px;
+                    border: 1px solid #000;
+                }
             }
+        }
+
+        #bottomImg {
+            margin-top: 32px;
+            width: 100%;
         }
     }
 
@@ -635,11 +648,11 @@ main {
         }
 
         div {
-            margin-top: 8px;
             align-items: center;
             display: flex;
             flex-direction: row;
             gap: 16px;
+            margin-top: 8px;
 
             h1 {
                 font-weight: normal;

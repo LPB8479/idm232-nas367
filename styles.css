@@ -1088,9 +1088,17 @@ main#help img {
   width: 100%;
 }
 main#cuisines {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: white;
-  padding-left: 24px;
-  padding-right: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 @media (min-width: 1024px) {
   main#cuisines {
@@ -1104,21 +1112,31 @@ main#cuisines {
     padding-right: 48px;
   }
 }
-main#cuisines ul {
+main#cuisines #cuisinesList {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 56px;
+  max-width: 1400px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  padding: 24px;
 }
-main#cuisines ul li {
+main#cuisines #cuisinesList li {
+  border: 1px solid red;
+  padding: 40px 0;
+}
+main#cuisines #cuisinesList li a {
+  font-size: 1.25rem;
   padding: 40px 60px;
   border: 1px solid #000;
-  font-size: 1.25rem;
+}
+main#cuisines #bottomImg {
+  margin-top: 32px;
+  width: 100%;
 }
 main #recipeError {
   -ms-flex-line-pack: center !important;
@@ -1168,7 +1186,6 @@ main#caseStudy h4 {
   margin-top: 16px;
 }
 main#caseStudy div {
-  margin-top: 8px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1180,6 +1197,7 @@ main#caseStudy div {
       -ms-flex-direction: row;
           flex-direction: row;
   gap: 16px;
+  margin-top: 8px;
 }
 main#caseStudy div h1 {
   font-weight: normal;

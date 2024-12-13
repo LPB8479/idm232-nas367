@@ -12,7 +12,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="cuisines.php">
                         <p>CUISINES</p>
                     </a>
                 </li>
