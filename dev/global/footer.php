@@ -7,13 +7,13 @@
         <section id="footerLinks">
             <ul class="noLink blankList ">
                 <li>
-                    <a href="recipe.php">
+                    <a href="search.php?query=">
                         <p>All Dishes</p>
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <p>Categories</p>
+                        <p>Cuisines</p>
                     </a>
                 </li>
                 <li>

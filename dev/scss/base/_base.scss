@@ -117,13 +117,11 @@ main {
             align-items: center;
             display: flex;
             justify-content: center;
-            // picture{                
                 img, source {
                     width: 100%;
                     max-width: 1400px;
                     display: block;
                 }
-            // }
         }
 
         #featuredRecipes {
@@ -194,7 +192,7 @@ main {
                 #filterResults {
                     align-items: center;
                     align-self: stretch;
-                    background: #F8E386;
+                    background: #F4E398;
                     display: flex;
                     flex-direction: column;
                     gap: 24px;
